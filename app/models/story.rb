@@ -8,4 +8,5 @@
 #
 
 class Story < ActiveRecord::Base
+has_many :story_parts
 end

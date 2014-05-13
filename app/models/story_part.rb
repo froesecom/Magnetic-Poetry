@@ -7,7 +7,11 @@
 #  y          :integer
 #  created_at :datetime
 #  updated_at :datetime
+#  story_id   :integer
+#  word_id    :integer
 #
 
 class StoryPart < ActiveRecord::Base
+belongs_to :story
+has_one :word
 end
