@@ -7,5 +7,5 @@ MagneticPoetry::Application.routes.draw do
 
   resources :stories
 
-  root :to => 'pages#index'
+  root :to => 'categories#index'
 end
