@@ -1,0 +1,29 @@
+<h1>Listing story_parts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>X</th>
+      <th>Y</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @story_parts.each do |story_part| %>
+      <tr>
+        <td><%= story_part.x %></td>
+        <td><%= story_part.y %></td>
+        <td><%= link_to 'Show', story_part %></td>
+        <td><%= link_to 'Edit', edit_story_part_path(story_part) %></td>
+        <td><%= link_to 'Destroy', story_part, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Story part', new_story_part_path %>

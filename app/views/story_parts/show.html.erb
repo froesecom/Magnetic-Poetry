@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>X:</strong>
+  <%= @story_part.x %>
+</p>
+
+<p>
+  <strong>Y:</strong>
+  <%= @story_part.y %>
+</p>
+
+<%= link_to 'Edit', edit_story_part_path(@story_part) %> |
+<%= link_to 'Back', story_parts_path %>
