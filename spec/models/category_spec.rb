@@ -11,5 +11,21 @@
 require 'spec_helper'
 
 describe Category do
-  pending "add some examples to (or delete) #{__FILE__}"
+  
+  describe '.new' do
+    before do
+      @category = Category.new
+    end
+  
+    it 'should return a new Category' do
+      @category.should_not be_nil
+      @category.class.should eq(Category)
+    end
+
+    it 'should have a name attribute' do
+      @category.should respond_to(:name)
+    end
+
+  end
+
 end
