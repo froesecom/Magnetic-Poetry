@@ -6,6 +6,7 @@ class CategoriesController < ApplicationController
   def index
     @categories = Category.all
     # @word = Wordnik.word.get_examples('slovenly')
+    
     @words = Wordnik.word_list
     @methods = Wordnik.public_methods(false)
   end

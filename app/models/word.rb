@@ -10,6 +10,5 @@
 #
 
 class Word < ActiveRecord::Base
-belongs_to :story_part
-has_one :category
+belongs_to :category
 end
