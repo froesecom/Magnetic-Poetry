@@ -16,3 +16,4 @@
 //= require_tree .
 //= require jquery.ui.all
 //= require underscore
+//= require wiselinks

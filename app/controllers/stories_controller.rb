@@ -32,7 +32,7 @@ class StoriesController < ApplicationController
   def create
     @story = Story.create()
     story_id = @story.id
-    puts 'I am in create'
+    
     render :json => story_id
       
   end

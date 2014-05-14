@@ -29,6 +29,8 @@ gem 'jbuilder', '~> 1.2'
 gem 'wordnik'
 gem 'underscore-rails'
 gem 'jquery-ui-rails'
+#wiselinks provides (among other thigns) support for .pushState() in non-compatable browsers 
+gem 'wiselinks'
 
 group :development, :test do
   gem 'rspec-rails'

@@ -23,6 +23,8 @@ $(document).ready( function(){
       //data: {task: {description: description, complete: false }}
       }).done(function(data){
         $("#container").addClass("story_created");
+        //updates the url with the Base64 version of the story id
+        history.pushState('', data , data);
         console.log(data);
         console.log("story created");
       })

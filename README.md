@@ -7,6 +7,7 @@ To do list:
 - get touch drag on mobile working
 - write test
 - create a 'seed' page, where I can hit the API to seed the database
+- create an element that says "chose a category above to begin. Change words by using the category selector"
 
 TESTING
 - test classic rails stuff
