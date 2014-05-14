@@ -1,7 +1,7 @@
 Category.destroy_all
 Word.destroy_all
 
-flatulence = Category.create(:name => "Farts")
+flatulence = Category.create(:name => "Flatulence")
 w1 = Word.create(:name => 'fart')
 w2 = Word.create(:name => 'pfft')
 

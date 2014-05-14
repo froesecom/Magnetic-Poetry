@@ -125,7 +125,7 @@
         1,
         1,
         1,
-        1,
+        0,
         null,
         null,
         null,
@@ -258,10 +258,16 @@
         null,
         1,
         2,
+        0,
+        0,
         null,
         null,
         null,
         null,
+        null,
+        null,
+        1,
+        1,
         1,
         null,
         null,
@@ -278,16 +284,7 @@
         null,
         1,
         5,
-        null,
         5,
-        5,
-        6,
-        3,
-        null,
-        4,
-        2,
-        null,
-        null,
         null,
         null,
         null,
@@ -322,7 +319,7 @@
         null,
         null,
         1,
-        10,
+        5,
         null,
         null
       ],
@@ -916,6 +913,11 @@
         null,
         1,
         1,
+        null,
+        null,
+        null,
+        null,
+        null,
         null
       ],
       "/Users/Froese/wdi_project_3/magnetic_poetry/spec/models/story_part_spec.rb": [
@@ -1042,7 +1044,7 @@
         1,
         null,
         1,
-        1,
+        0,
         null,
         null,
         null
@@ -1533,6 +1535,6 @@
         null
       ]
     },
-    "timestamp": 1399980509
+    "timestamp": 1400041477
   }
 }

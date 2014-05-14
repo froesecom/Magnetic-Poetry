@@ -1,3 +1,9 @@
+<select>
+  <% @categories.each do |category| %>
+    <option value="<%= category.name %>"><%= category.name %></option>
+  <% end %>
+</select>
+
 <h1>Verbs</h1>
 <% @common_verbs.each do |verb| %>
   <div class="word right" id="<%= verb.id %>"><%= verb.name %></div>

@@ -34,6 +34,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'simplecov'
   gem 'annotate'
+  gem 'pry'
 end
 
 group :doc do

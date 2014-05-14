@@ -6,6 +6,9 @@ class StoriesController < ApplicationController
   def index
     @common_verbs = Category.find_by(name: "Common verbs").words
     @joiners = Category.find_by(name: "Joiners").words
+    @categories = Category.all
+
+    # @categories = Category.all_except("Common verbs", "Joiners")
   end
 
   # GET /stories/1
