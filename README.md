@@ -8,6 +8,10 @@ To do list:
 - write test
 - create a 'seed' page, where I can hit the API to seed the database
 
+TESTING
+- test classic rails stuff
+- test if associations are working
+
 POLISH
 - social media share icons
 
