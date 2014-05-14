@@ -2,11 +2,3 @@ body {
   min-width: 960px;
   height: 500px;
 }
-.word {
-  color: white;
-  padding: 5px;
-  background-color: red;
-  border: 1px solid black;
-  display: inline-block;
-}
-

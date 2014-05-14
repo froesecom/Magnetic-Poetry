@@ -6,7 +6,14 @@ $(document).ready( function(){
 //=========================================
   var story = {
     createStory: function(){
-      //something ajax here
+      $.ajax({
+      url: "/stories",
+      type: "POST",
+      dataType: 'json',
+      //data: {task: {description: description, complete: false }}
+    }).done(function(){
+      console.log("task created");
+    })
       console.log("inside create story function");
     }
   }

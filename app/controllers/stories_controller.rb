@@ -14,8 +14,8 @@ class StoriesController < ApplicationController
   # GET /stories/1
   # GET /stories/1.json
   def show
-    @story = Story.create()
-    redirect_to "/stories/#{ Base64.encode64 @story.id.to_s }"
+    id = Base64.decode64 params[:id]
+    @story = Story.find id
   end
 
   # GET /stories/new
