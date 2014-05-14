@@ -1,4 +1,22 @@
 body {
   min-width: 960px;
   height: 500px;
+
+}
+
+#side_bar {
+  
+  border: 1px solid black;
+  display: inline-block;
+  height: 100vh;
+  vertical-align: top;
+  padding: 0 15px;
+
+}
+#fridge {
+  width: 600px;
+  border: 1px solid black;
+  display: inline-block;
+  height: 100vh;
+  vertical-align: top;
 }
