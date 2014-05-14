@@ -5,17 +5,27 @@ $(document).ready( function(){
 //STORY FUNCTIONALITY
 //=========================================
   var story = {
+    checkForStory: function(){
+      if ($(".story_created").length === 0) {
+        console.log($(".story_created"));
+        this.createStory(); 
+      } else {
+        console.log($(".story_created"));
+        console.log("story already created");
+        return
+      }
+    },
     createStory: function(){
       $.ajax({
       url: "/stories",
       type: "POST",
       dataType: 'json',
       //data: {task: {description: description, complete: false }}
-    }).done(function(data){
-      console.log(data);
-      console.log("task created");
-    })
-      console.log("inside create story function");
+      }).done(function(data){
+        $("#container").addClass("story_created");
+        console.log(data);
+        console.log("story created");
+      })
     }
   }
 
@@ -45,7 +55,7 @@ $(document).ready( function(){
 
   $('#category_selector').on('change', function () {
 
-    story.createStory();
+    story.checkForStory();
     //var category = $(this).val();
     //console.log('this works', category, story)
   });
