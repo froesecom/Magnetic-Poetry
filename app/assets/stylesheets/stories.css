@@ -1,0 +1,11 @@
+body {
+  min-width: 960px;
+  height: 500px;
+}
+.word {
+  color: white;
+  height: 50px;
+  width: 50px;
+  background-color: red;
+  border: 1px solid black;
+}

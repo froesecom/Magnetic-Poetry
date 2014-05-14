@@ -4,7 +4,8 @@ class StoriesController < ApplicationController
   # GET /stories
   # GET /stories.json
   def index
-    @stories = Story.all
+    @common_verbs = Category.find_by(name: "Common verbs").words
+    @joiners = Category.find_by(name: "Joiners").words
   end
 
   # GET /stories/1
