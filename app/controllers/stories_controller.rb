@@ -11,6 +11,8 @@ class StoriesController < ApplicationController
   # GET /stories/1
   # GET /stories/1.json
   def show
+    @story = Story.create()
+    redirect_to "/stories/#{ Base64.encode64 @story.id.to_s }"
   end
 
   # GET /stories/new
@@ -25,17 +27,8 @@ class StoriesController < ApplicationController
   # POST /stories
   # POST /stories.json
   def create
-    @story = Story.new(story_params)
-
-    respond_to do |format|
-      if @story.save
-        format.html { redirect_to @story, notice: 'Story was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @story }
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @story.errors, status: :unprocessable_entity }
-      end
-    end
+    @story = Story.create()
+    redirect_to "/stories/#{ Base64.encode64 @story.id.to_s }"
   end
 
   # PATCH/PUT /stories/1

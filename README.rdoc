@@ -1,6 +1,6 @@
 To do list:
-- hide Wordnik details in config/initializers/wordnik.rb
-- figure out how to generate words if the API goes down
+
+- get touch drag on mobile working
 
 == README
 
