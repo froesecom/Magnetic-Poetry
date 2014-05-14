@@ -31,7 +31,10 @@ class StoriesController < ApplicationController
   # POST /stories.json
   def create
     @story = Story.create()
-    redirect_to "/stories/#{ Base64.encode64 @story.id.to_s }"
+    story_id = @story.id
+    puts 'I am in create'
+    render :json => story_id
+      
   end
 
   # PATCH/PUT /stories/1

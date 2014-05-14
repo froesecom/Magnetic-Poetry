@@ -11,12 +11,14 @@ $(document).ready( function(){
       type: "POST",
       dataType: 'json',
       //data: {task: {description: description, complete: false }}
-    }).done(function(){
+    }).done(function(data){
+      console.log(data);
       console.log("task created");
     })
       console.log("inside create story function");
     }
   }
+
   
 //=========================================
 //STORY_PART FUNCTIONALITY
