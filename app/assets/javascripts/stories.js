@@ -35,11 +35,12 @@ $(document).ready( function(){
   });
 
   $('#category_selector').on('change', function () {
-    var category = $(this).val();
-    console.log('this works', category, story)
+
+    
+    //var category = $(this).val();
+    //console.log('this works', category, story)
   });
   
-
 
 //======================================
 //jQueryUI functionality added

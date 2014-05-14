@@ -1,12 +1,12 @@
  <div class="container"> 
   <form> 
-   <select name='category_form' id='category_selector'> 
+   <select name='category_selector' id='category_selector'> 
       <% @categories.each do |category| %>
         <option class="category" value="<%= category.name %>"><%= category.name %></option>
       <% end %>
     </select>
   </form>
-
+  
   <h1>Verbs</h1>
   <% @common_verbs.each do |verb| %>
     <div class="word" id="<%= verb.id %>"><%= verb.name %></div>
