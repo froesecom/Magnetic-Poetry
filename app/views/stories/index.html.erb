@@ -1,6 +1,7 @@
  <div class="container"> 
   <form> 
    <select name='category_selector' id='category_selector'> 
+      <option value="" disabled selected>Choose a word category</option>
       <% @categories.each do |category| %>
         <option class="category" value="<%= category.name %>"><%= category.name %></option>
       <% end %>

@@ -4,9 +4,9 @@ body {
 }
 .word {
   color: white;
-  height: 50px;
-  width: 50px;
+  padding: 5px;
   background-color: red;
   border: 1px solid black;
+  display: inline-block;
 }
 

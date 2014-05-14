@@ -2,7 +2,7 @@ $(document).ready( function(){
 
 
 //=========================================
-//STORY PART FUNCTIONALITY
+//STORY FUNCTIONALITY
 //=========================================
   var story = {
     createStory: function(){
@@ -12,7 +12,7 @@ $(document).ready( function(){
   }
   
 //=========================================
-//STORY PART FUNCTIONALITY
+//STORY_PART FUNCTIONALITY
 //=========================================
   var storyPart = {
     createStoryPart: function(word){
@@ -36,7 +36,7 @@ $(document).ready( function(){
 
   $('#category_selector').on('change', function () {
 
-    
+    story.createStory();
     //var category = $(this).val();
     //console.log('this works', category, story)
   });
