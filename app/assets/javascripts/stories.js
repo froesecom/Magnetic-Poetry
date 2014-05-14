@@ -1,34 +1,52 @@
- $(document).ready( function(){
-  
-    var storyPart = {
-      createStoryPart: function(word){
-        console.log(word);
-      },
-      secondThing: 0,
+$(document).ready( function(){
 
+
+//=========================================
+//STORY PART FUNCTIONALITY
+//=========================================
+  var story = {
+    createStory: function(){
+      //something ajax here
+      console.log("inside create story function");
     }
+  }
+  
+//=========================================
+//STORY PART FUNCTIONALITY
+//=========================================
+  var storyPart = {
+    createStoryPart: function(word){
+      console.log(word.css("top"));
+    },
+    secondThing: 0,
+
+  }
 
 // ====================================
 // EVENT LISTENERS BELOW
 // =====================================
-    $(".word").on("click", function () {
-      //need to create and if/else statement here to check if the story part exists
-        storyPart.createStoryPart($(this));
-      
+  $(".word").on("click", function () {
+    //need to create and if/else statement here to check if the story part exists
+    storyPart.createStoryPart($(this));
+    // var leftPosition = $(this).css("left");
+    // var topPosition = $(this).css("top");
+    // console.log("left:" + leftPosition + " top:" + topPosition);
+    // console.log($(this).position());
+  });
 
-      // var leftPosition = $(this).css("left");
-      // var topPosition = $(this).css("top");
-      // console.log("left:" + leftPosition + " top:" + topPosition);
-      // console.log($(this).position());
-    
-    });
+  $('#category_selector').on('change', function () {
+    var category = $(this).val();
+    console.log('this works', category, story)
+  });
+  
 
-    $(function() {
-      $( ".word" ).draggable();
-    });
 
-    if (window.jQuery) {
-      console.log("jquery working");
-    }
+//======================================
+//jQueryUI functionality added
+//=======================================
+  $(function() {
+    $( ".word" ).draggable();
+  });
+  
 });
 

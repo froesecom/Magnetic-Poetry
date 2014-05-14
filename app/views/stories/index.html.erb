@@ -1,15 +1,19 @@
-<select>
-  <% @categories.each do |category| %>
-    <option value="<%= category.name %>"><%= category.name %></option>
+ <div class="container"> 
+  <form> 
+   <select name='category_form' id='category_selector'> 
+      <% @categories.each do |category| %>
+        <option class="category" value="<%= category.name %>"><%= category.name %></option>
+      <% end %>
+    </select>
+  </form>
+
+  <h1>Verbs</h1>
+  <% @common_verbs.each do |verb| %>
+    <div class="word" id="<%= verb.id %>"><%= verb.name %></div>
   <% end %>
-</select>
 
-<h1>Verbs</h1>
-<% @common_verbs.each do |verb| %>
-  <div class="word right" id="<%= verb.id %>"><%= verb.name %></div>
-<% end %>
-
-<h1>Joiner words</h1>
-<% @joiners.each do |joiner| %>
-  <div class="word right" id="<%= joiner.id %>"><%= joiner.name %></div>
-<% end %>
+  <h1>Joiner words</h1>
+  <% @joiners.each do |joiner| %>
+    <div class="word" id="<%= joiner.id %>"><%= joiner.name %></div>
+  <% end %>
+</div>
