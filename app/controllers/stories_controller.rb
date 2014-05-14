@@ -14,8 +14,8 @@ class StoriesController < ApplicationController
   # GET /stories/1
   # GET /stories/1.json
   def show
-    id = Base64.decode64 params[:id]
-    @story = Story.find id
+    #id = Base64.decode64(params[:id])
+    @story = Story.find(params[:id])
   end
 
   # GET /stories/new
@@ -31,8 +31,9 @@ class StoriesController < ApplicationController
   # POST /stories.json
   def create
     @story = Story.create()
+    url_string = Base64.encode64 @story.id.to_s
+     
     story_id = @story.id
-    
     render :json => story_id
       
   end

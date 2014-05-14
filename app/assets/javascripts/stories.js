@@ -6,8 +6,8 @@ $(document).ready( function(){
 //=========================================
   var story = {
     checkForStory: function(){
+      // Check if story has already been created
       if ($(".story_created").length === 0) {
-        console.log($(".story_created"));
         this.createStory(); 
       } else {
         console.log($(".story_created"));
@@ -19,14 +19,15 @@ $(document).ready( function(){
       $.ajax({
       url: "/stories",
       type: "POST",
-      dataType: 'json',
+      dataType: 'json'
       //data: {task: {description: description, complete: false }}
       }).done(function(data){
+        console.log("story created");
         $("#container").addClass("story_created");
         //updates the url with the Base64 version of the story id
         history.pushState('', data , data);
         console.log(data);
-        console.log("story created");
+        
       })
     }
   }
