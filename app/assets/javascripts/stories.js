@@ -3,7 +3,7 @@
 //Start retriving story information, if story exists
 //====================================
 var site_data
-var pathname = (window.location.pathname).replace('/','');
+var pathname = (window.location.hash).replace('#','');
 
 if (pathname !== '') {
   console.log("here is pathname" + pathname);
@@ -39,7 +39,7 @@ $(document).ready( function(){
         history.pushState('', data , '#' + data);
         console.log(data);
 
-        pathname = (window.location.pathname).replace('/','');
+        pathname = (window.location.hash).replace('#','');
       })
     }
   }
