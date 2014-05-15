@@ -1,13 +1,11 @@
 To do list:
 
-- use story_create callback to update the URL after story created.
-- experiment with draggable where there are muliple larger "canvas" divs on the page
 - build create story function (also creates unique URL)
 - buidl create/update story functionality
 - get touch drag on mobile working
 - write test
-- create a 'seed' page, where I can hit the API to seed the database
-- create an element that says "chose a category above to begin. Change words by using the category selector"
+- create a 'seed' page
+
 
 TESTING
 - test classic rails stuff
@@ -15,6 +13,12 @@ TESTING
 
 POLISH
 - social media share icons
+
+CLEAN UP 
+- get rid of Wordnik gem and config file
+- get rid of wiselinks
+- clean up all the excess scaffolding shit
+- refactor js so it's in multiple files
 
 
 CLEANUP
