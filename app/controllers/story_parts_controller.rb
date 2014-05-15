@@ -24,8 +24,9 @@ class StoryPartsController < ApplicationController
   # POST /story_parts
   # POST /story_parts.json
   def create
-    @story_part = StoryPart.create(story_part_params)
-    
+    story_part = StoryPart.create(story_part_params)
+    story_part_id = story_part.id
+    render :json => story_part_id
     # @story = Story.create()    
     # story_id = @story.id
     # render :json => story_id

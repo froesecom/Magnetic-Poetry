@@ -56,9 +56,16 @@ $(document).ready( function(){
       var y = wordDomObject.offsetTop;
       var word_id = parseInt(wordDomObject.id);
       var story_id = parseInt(pathname);
-    
+      $.ajax({
+        url: "/story_parts",
+        type: "POST",
+        dataType: 'json',
+        data: {story_part: {x: x, y: y, story_id: story_id, word_id: word_id }}
+        }).done(function(data){
+          console.log("in done function of createStoryPart");
+        });
       
-      //data: {task: {description: description, complete: false }}
+      
       // #  x          :integer
       // #  y          :integer
       // #  created_at :datetime
@@ -66,9 +73,7 @@ $(document).ready( function(){
       // #  story_id   :integer
       // #  word_id    :integer
       // console.log(word.css("top"));
-    },
-    secondThing: 0,
-
+    }
   }
 
 // ====================================
