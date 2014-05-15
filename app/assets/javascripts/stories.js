@@ -51,12 +51,13 @@ $(document).ready( function(){
 //=========================================
   var storyPart = {
     createStoryPart: function(wordDomObject, wordJQueryObject){
-      var x = wordJQueryObject.position().left;
-      var y = wordJQueryObject.position().top;
+      //find out x coord of word relative to #fridge div
+      var x = wordDomObject.offsetLeft - $("#fridge").position().left;
+      var y = wordDomObject.offsetTop;
       var word_id = parseInt(wordDomObject.id);
       var story_id = parseInt(pathname);
-      debugger;
-      console.log("Left:" + x + "Top:" + y + "ID" + word_id);
+    
+      
       //data: {task: {description: description, complete: false }}
       // #  x          :integer
       // #  y          :integer
@@ -74,14 +75,11 @@ $(document).ready( function(){
 // EVENT LISTENERS BELOW
 // =====================================
   $(".word").on("click", function () {
+    //first check if a story exists
     if (pathname !== '') {
       //need to create and if/else statement here to check if the story part exists
       storyPart.createStoryPart(this, $(this));
     }
-    // var leftPosition = $(this).css("left");
-    // var topPosition = $(this).css("top");
-    // console.log("left:" + leftPosition + " top:" + topPosition);
-    // console.log($(this).position());
   });
 
   $('#category_selector').on('change', function () {
