@@ -55,12 +55,17 @@ $(document).ready( function(){
       var y = Math.round(wordDomObject.offsetTop);
       var word_id = parseInt(wordDomObject.id);
       var story_id = parseInt(pathname);
+      //set data-story_part to true to use for checking in event listener
+      wordJQueryObject.attr("data-story_part", "true");
+      debugger;
+
       $.ajax({
         url: "/story_parts",
         type: "POST",
         dataType: 'json',
         data: {story_part: {x: x, y: y, story_id: story_id, word_id: word_id }}
-        }).done(function(data){
+        }).done(function(story_part_id){
+          
           console.log("in done function of createStoryPart");
       });
     }
