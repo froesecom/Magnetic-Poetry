@@ -57,7 +57,6 @@ $(document).ready( function(){
       var story_id = parseInt(pathname);
       //set data-story_part to true to use for checking in event listener
       wordJQueryObject.attr("data-story_part", "true");
-      debugger;
 
       $.ajax({
         url: "/story_parts",
