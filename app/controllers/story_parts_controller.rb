@@ -24,7 +24,6 @@ class StoryPartsController < ApplicationController
   # POST /story_parts
   # POST /story_parts.json
   def create
-    binding.pry
     story_part = StoryPart.create(story_part_params)
     
 
