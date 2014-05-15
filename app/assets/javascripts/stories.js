@@ -52,8 +52,8 @@ $(document).ready( function(){
   var storyPart = {
     createStoryPart: function(wordDomObject, wordJQueryObject){
       //find out x coord of word relative to #fridge div
-      var x = wordDomObject.offsetLeft - $("#fridge").position().left;
-      var y = wordDomObject.offsetTop;
+      var x = Math.round(wordDomObject.offsetLeft - $("#fridge").position().left);
+      var y = Math.round(wordDomObject.offsetTop);
       var word_id = parseInt(wordDomObject.id);
       var story_id = parseInt(pathname);
       $.ajax({

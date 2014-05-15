@@ -24,9 +24,13 @@ class StoryPartsController < ApplicationController
   # POST /story_parts
   # POST /story_parts.json
   def create
+    binding.pry
     story_part = StoryPart.create(story_part_params)
+    
+
     story_part_id = story_part.id
     render :json => story_part_id
+    
     # @story = Story.create()    
     # story_id = @story.id
     # render :json => story_id
@@ -74,6 +78,6 @@ class StoryPartsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def story_part_params
-      params.require(:story_part).permit(:x, :y)
+      params.require(:story_part).permit(:x, :y, :word_id, :story_id)
     end
 end
