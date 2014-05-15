@@ -2,11 +2,11 @@
 //==========================
 //Start retriving story information, if story exists
 //====================================
-var site_data, current_pathname;
-var original_pathname = (window.location.pathname).replace('/','');
+var site_data
+var pathname = (window.location.pathname).replace('/','');
 
-if (original_pathname !== '') {
-  console.log("here is pathname" + original_pathname);
+if (pathname !== '') {
+  console.log("here is pathname" + pathname);
   //got and get ajax data and save to site_data RENAME SITE_DATA
 }
 
@@ -19,7 +19,7 @@ $(document).ready( function(){
   var story = {
     checkForStory: function(){
       // Check if story has already been created
-      if (current_pathname) {
+      if (pathname) {
         console.log("story already created");
         return 
       } else {
@@ -36,11 +36,11 @@ $(document).ready( function(){
         
         console.log("story created");
         $("#container").addClass("story_created");
-        //updates the url with the Base64 version of the story id
+        //updates the url 
         history.pushState('', data , data);
         console.log(data);
 
-        current_pathname = (window.location.pathname).replace('/','');
+        pathname = (window.location.pathname).replace('/','');
       })
     }
   }
@@ -50,8 +50,21 @@ $(document).ready( function(){
 //STORY_PART FUNCTIONALITY
 //=========================================
   var storyPart = {
-    createStoryPart: function(word){
-      console.log(word.css("top"));
+    createStoryPart: function(wordDomObject, wordJQueryObject){
+      var x = wordJQueryObject.position().left;
+      var y = wordJQueryObject.position().top;
+      var word_id = parseInt(wordDomObject.id);
+      var story_id = parseInt(pathname);
+      debugger;
+      console.log("Left:" + x + "Top:" + y + "ID" + word_id);
+      //data: {task: {description: description, complete: false }}
+      // #  x          :integer
+      // #  y          :integer
+      // #  created_at :datetime
+      // #  updated_at :datetime
+      // #  story_id   :integer
+      // #  word_id    :integer
+      // console.log(word.css("top"));
     },
     secondThing: 0,
 
@@ -61,8 +74,10 @@ $(document).ready( function(){
 // EVENT LISTENERS BELOW
 // =====================================
   $(".word").on("click", function () {
-    //need to create and if/else statement here to check if the story part exists
-    storyPart.createStoryPart($(this));
+    if (pathname !== '') {
+      //need to create and if/else statement here to check if the story part exists
+      storyPart.createStoryPart(this, $(this));
+    }
     // var leftPosition = $(this).css("left");
     // var topPosition = $(this).css("top");
     // console.log("left:" + leftPosition + " top:" + topPosition);

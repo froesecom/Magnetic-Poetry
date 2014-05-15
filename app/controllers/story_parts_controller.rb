@@ -24,17 +24,21 @@ class StoryPartsController < ApplicationController
   # POST /story_parts
   # POST /story_parts.json
   def create
-    @story_part = StoryPart.new(story_part_params)
+    @story_part = StoryPart.create(story_part_params)
+    
+    # @story = Story.create()    
+    # story_id = @story.id
+    # render :json => story_id
 
-    respond_to do |format|
-      if @story_part.save
-        format.html { redirect_to @story_part, notice: 'Story part was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @story_part }
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @story_part.errors, status: :unprocessable_entity }
-      end
-    end
+    # respond_to do |format|
+    #   if @story_part.save
+    #     format.html { redirect_to @story_part, notice: 'Story part was successfully created.' }
+    #     format.json { render action: 'show', status: :created, location: @story_part }
+    #   else
+    #     format.html { render action: 'new' }
+    #     format.json { render json: @story_part.errors, status: :unprocessable_entity }
+    #   end
+    # end
   end
 
   # PATCH/PUT /story_parts/1

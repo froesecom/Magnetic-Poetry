@@ -7,6 +7,8 @@ class StoriesController < ApplicationController
     @common_verbs = Category.find_by(name: "Common verbs").words
     @joiners = Category.find_by(name: "Joiners").words
     @categories = Category.all
+    @story_parts = StoryPart.all
+    
     respond_to do |format|
       format.html
       format.json {render :json => @categories}
