@@ -6,6 +6,7 @@
 #  name       :text
 #  created_at :datetime
 #  updated_at :datetime
+#  type       :string(255)
 #
 
 require 'spec_helper'

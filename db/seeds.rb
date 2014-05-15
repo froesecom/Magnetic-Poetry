@@ -1,6 +1,10 @@
 Category.destroy_all
 Word.destroy_all
 
+word_list = {
+  "Joiners" => %w(the the a a to to if which it that do are is go get)
+}
+
 flatulence = Category.create(:name => "Flatulence")
 w1 = Word.create(:name => 'fart')
 w2 = Word.create(:name => 'pfft')

@@ -56,7 +56,7 @@ $(document).ready( function(){
       var word_id = parseInt(wordDomObject.id);
       var story_id = parseInt(pathname);
       //set data-story_part to true to use for checking in event listener
-      wordJQueryObject.attr("data-story_part", "true");
+      wordJQueryObject.attr("data-storypart", "true");
 
       $.ajax({
         url: "/story_parts",
