@@ -6,7 +6,7 @@
 #  name       :text
 #  created_at :datetime
 #  updated_at :datetime
-#  type       :string(255)
+#  cat_type   :string(255)
 #
 
 class Category < ActiveRecord::Base
