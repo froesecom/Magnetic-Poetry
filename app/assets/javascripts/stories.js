@@ -1,5 +1,5 @@
 
-//==========================
+//====================================
 //Start retriving story information, if story exists
 //====================================
 var site_data
@@ -7,12 +7,11 @@ var pathname = (window.location.pathname).replace('/','');
 
 if (pathname !== '') {
   console.log("here is pathname" + pathname);
-  //got and get ajax data and save to site_data RENAME SITE_DATA
+  //go and get ajax data and save to site_data RENAME SITE_DATA
 }
 
+//wait for the page to finish loading
 $(document).ready( function(){
-  
-  
 //=========================================
 //STORY FUNCTIONALITY
 //=========================================
@@ -37,7 +36,7 @@ $(document).ready( function(){
         console.log("story created");
         $("#container").addClass("story_created");
         //updates the url 
-        history.pushState('', data , data);
+        history.pushState('', data , '#' + data);
         console.log(data);
 
         pathname = (window.location.pathname).replace('/','');
@@ -63,16 +62,7 @@ $(document).ready( function(){
         data: {story_part: {x: x, y: y, story_id: story_id, word_id: word_id }}
         }).done(function(data){
           console.log("in done function of createStoryPart");
-        });
-      
-      
-      // #  x          :integer
-      // #  y          :integer
-      // #  created_at :datetime
-      // #  updated_at :datetime
-      // #  story_id   :integer
-      // #  word_id    :integer
-      // console.log(word.css("top"));
+      });
     }
   }
 
@@ -88,10 +78,9 @@ $(document).ready( function(){
   });
 
   $('#category_selector').on('change', function () {
-
+    //check if a story already exists for this URL;
+    //if not, create one.
     story.checkForStory();
-    //var category = $(this).val();
-    //console.log('this works', category, story)
   });
   
 
