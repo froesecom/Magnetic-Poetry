@@ -7,7 +7,10 @@ class StoriesController < ApplicationController
     @common_verbs = Category.find_by(name: "Common verbs").words
     @joiners = Category.find_by(name: "Joiners").words
     @categories = Category.all
-
+    respond_to do |format|
+      format.html
+      format.json {render :json => @categories}
+    end
     # @categories = Category.all_except("Common verbs", "Joiners")
   end
 

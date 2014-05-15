@@ -5,7 +5,7 @@ class CategoriesController < ApplicationController
   # GET /categories.json
   def index
     
-    # @word = Wordnik.word.get_examples('slovenly')
+    #@word = Wordnik.word.get_examples('slovenly')
     
     @word_lists = Wordnik.user.get_user_word_lists("Rhialto")
    
