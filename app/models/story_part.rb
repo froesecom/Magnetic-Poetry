@@ -13,5 +13,5 @@
 
 class StoryPart < ActiveRecord::Base
 belongs_to :story
-has_one :word
+belongs_to :word
 end
