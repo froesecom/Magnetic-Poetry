@@ -87,10 +87,23 @@ $(document).ready(function (){
 //WORD FUNCTIONALITY
 //============================================
 var word = {
-  displayWords: function (selected_category) {
-    word_objs = categorised_words[selected_category]
-    console.log("word objects", word_objs);
-    debugger;
+  displayWords: function (selectorJQueryObj) {
+    //use selected_category(which is category id) to find word objects
+    var selected_category = selectorJQueryObj.val();
+    var word_objs = categorised_words[selected_category];
+    
+    //find id of selector so we can decide which sidebar to display words in
+    var selector_id = selectorJQueryObj.attr('id');
+    
+    //find id sidebar so we can append the words to it
+    var parent_div_id = $('#' + selector_id).closest('div').attr('id')
+    //DELETE ALL DIVS
+    //iterate through words and create them
+    _.each(word_objs, function(word){
+      $("#" + parent_div_id).append("<div>foo</div>")  
+    });
+
+    console.log("word objects", parent_div_id);
   }
 }
 
@@ -105,12 +118,16 @@ var word = {
     }
   });
 
-  $('#category_selector').on('change', function () {
+  $('#basic_category, #theme_category ').on('change', function () {
     //check if a story already exists for this URL;
     //if not, create one.
     story.checkForStory();
-    //find value of selected dropdown and display words
-    word.displayWords($(this).val());
+    
+    //pass jQuery selector into displayWords function
+    word.displayWords($(this));
+   
+
+  
   });
   
 

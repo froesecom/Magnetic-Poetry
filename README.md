@@ -1,5 +1,7 @@
 To do list:
 
+- push to heroku
+- create underscore template for creating divs in displayWords function
 - build create story function (also creates unique URL)
 - buidl create/update story functionality
 - get touch drag on mobile working
@@ -24,4 +26,4 @@ CLEAN UP
 CLEANUP
 
 - clean up spec file
-- clean up all the unused rails scaffolding
+- clean up all the unused rails scaffoldi
