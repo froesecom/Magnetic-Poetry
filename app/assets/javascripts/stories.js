@@ -1,37 +1,29 @@
+function CheckForStory() {
+  //create global function for pathname
+  pathname = (window.location.hash).replace('#','');
+   //check for story in the URL
+   if (pathname !== '') {
+    //if story, get data
+      $.ajax({
+      url: "/storyparts",
+      type: "GET",
+      dataType: 'json',
+      data: {story_part: {story_id: pathname}}
+      }).done(function(data){
+        ConstructPage(data);
+    });
+  } 
+}
 
-//==============================================
-//Start retrieving info before document's ready
-//==============================================
-var pathname = (window.location.hash).replace('#','');
+CheckForStory();
 
-var categories = $.ajax({
-  url: "/categories",
-  type: "GET",
-  dataType: 'json'
-  //data: {task: {description: description, complete: false }}
-  }).done(function(data){
-    data;
-});
-
-var words = $.ajax({
-  url: "/words",
-  type: "GET",
-  dataType: 'json'
-  //data: {task: {description: description, complete: false }}
-  }).done(function(data){
-    data;
-});
-
-// =======================================================
-// check if story exists, if so, retrieve info
-// =======================================================
-if (pathname !== '') {
-  console.log("here is pathname" + pathname);
-  //go and get ajax data and save to site_data RENAME SITE_DATA
+function ConstructPage(data) {
+  //CONSTRUCT THE PAGE HERE
+  console.log("constructing page", data);
 }
 
 //wait for the page to finish loading
-$(document).ready( function(){
+$(document).ready(function (){
 //=========================================
 //STORY FUNCTIONALITY
 //=========================================
