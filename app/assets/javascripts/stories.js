@@ -86,8 +86,12 @@ $(document).ready(function (){
 //WORD FUNCTIONALITY
 //============================================
 var word = {
-  displayWords: function (category) {
-    console.log("Inside dispaly Words");
+  displayWords: function (selected_category) {
+    //find category_obj that matches category in drop down menu. Search json 'categories' that is in html to do this
+    var category_obj = $.grep(categories, function(e){ return e.name == selected_category })
+    debugger;
+    var data = JSON.stringify(words);
+    console.log("Inside dispaly Words", data);
   }
 }
 
@@ -106,8 +110,8 @@ var word = {
     //check if a story already exists for this URL;
     //if not, create one.
     story.checkForStory();
-    //Display words
-    word.displayWords(this);
+    //find value of selected dropdown and display words
+    word.displayWords($(this).val());
   });
   
 
