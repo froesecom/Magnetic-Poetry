@@ -88,14 +88,9 @@ $(document).ready(function (){
 //============================================
 var word = {
   displayWords: function (selected_category) {
-    //find category_obj that matches category in drop down menu. Search json 'categories' that is in html to do this
-    var category_obj = $.grep(categories, function(e){ return e.name == selected_category })
-    
-    // for(var key in category_obj) {
-    //   alert('key: ' + key + '\n' + 'value: ' + obj[key]);
-    // }
-    var data = JSON.stringify(words);
-    console.log("Inside dispaly Words", data);
+    word_objs = categorised_words[selected_category]
+    console.log("word objects", word_objs);
+    debugger;
   }
 }
 

@@ -6,7 +6,7 @@
      <select name='category_selector' id='category_selector'> 
         <option value="" disabled selected>Choose a word category</option>
         <% @theme_categories.each do |category| %>
-          <option class="category" value="<%= category.name %>"><%= category.name %></option>
+          <option class="category" value="<%= category.id %>"><%= category.name %></option>
         <% end %>
       </select>
     </form>  
@@ -23,7 +23,7 @@
      <select name='category_selector' id='category_selector'> 
         <option value="" disabled selected>Choose a word category</option>
         <% @basic_categories.each do |category| %>
-          <option class="category" value="<%= category.name %>"><%= category.name %></option>
+          <option class="category" value="<%= category.id %>"><%= category.name %></option>
         <% end %>
       </select>
     </form>  
