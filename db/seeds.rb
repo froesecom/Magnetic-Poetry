@@ -4,7 +4,7 @@ Word.destroy_all
 word_list = {
   "Conjunctions & more-Basics" => %w(the the a a to to if which what when why & & can good bad no yes from),
   "Pronouns-Basics" => %w(I me you we us them she he her his hers him they nobody nothing this that it that its anybody anyone something one our who those my thier theirs these those),
-  "Generic Verbs-Basics" => %w(are is go get do),
+  "Generic Verbs-Basics" => %w(are is go get do ask run fly drink kiss think ),
   "Punctuation & Bits-Basics" => %w(? ? ! ! . . : : " " " " - - = = + + , , ' ' s s),
   "Feelings-Themes" => %w(happy sad angry mad tired pumped bored apathetic loved lonely dejected),
   "Australiana-Themes" => %w(totes wobbly ute turps truckie shithouse plonk outback yabby walkabout hoon strewth footy shonky fairgo ropeable root drongo ratbag roo shocking ripper prezzy porky parma Ford Holden bush onya bloody grog gday mate dunny dero beaut Sheila Blundstones fair-dinkum brickie barbie stubby bogan),
