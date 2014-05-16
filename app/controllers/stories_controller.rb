@@ -13,7 +13,11 @@ class StoriesController < ApplicationController
     #   format.html
     #   format.json {render :json => @categories}
     # end
-    
+    @categories = {}
+    Word.select(:id, :name, :category_id).each do |word|
+      @categories[word.category_id] ||= []
+      @categories[word.category_id].push word
+    end
   end
 
   # GET /stories/1

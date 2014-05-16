@@ -4,8 +4,9 @@ function CheckForStory() {
    //check for story in the URL
    if (pathname !== '') {
     //if story, get data
+      console.log("trying to check for storyparts")
       $.ajax({
-      url: "/storyparts",
+      url: "/story_parts",
       type: "GET",
       dataType: 'json',
       data: {story_part: {story_id: pathname}}
@@ -89,7 +90,10 @@ var word = {
   displayWords: function (selected_category) {
     //find category_obj that matches category in drop down menu. Search json 'categories' that is in html to do this
     var category_obj = $.grep(categories, function(e){ return e.name == selected_category })
-    debugger;
+    
+    // for(var key in category_obj) {
+    //   alert('key: ' + key + '\n' + 'value: ' + obj[key]);
+    // }
     var data = JSON.stringify(words);
     console.log("Inside dispaly Words", data);
   }

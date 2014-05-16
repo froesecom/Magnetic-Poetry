@@ -4,12 +4,14 @@ class StoryPartsController < ApplicationController
   # GET /story_parts
   # GET /story_parts.json
   def index
-    @story_parts = StoryPart.all
+    story_parts = StoryPart.all
+    render :json => story_parts
   end
 
   # GET /story_parts/1
   # GET /story_parts/1.json
   def show
+    
   end
 
   # GET /story_parts/new
