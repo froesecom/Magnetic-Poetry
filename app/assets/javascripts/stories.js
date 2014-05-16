@@ -82,6 +82,15 @@ $(document).ready(function (){
     }
   }
 
+//============================================
+//WORD FUNCTIONALITY
+//============================================
+var word = {
+  displayWords: function (category) {
+    console.log("Inside dispaly Words");
+  }
+}
+
 // ====================================
 // EVENT LISTENERS BELOW
 // =====================================
@@ -97,6 +106,8 @@ $(document).ready(function (){
     //check if a story already exists for this URL;
     //if not, create one.
     story.checkForStory();
+    //Display words
+    word.displayWords(this);
   });
   
 
