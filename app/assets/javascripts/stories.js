@@ -1,10 +1,30 @@
 
-//====================================
-//Start retriving story information, if story exists
-//====================================
-var site_data
+//==============================================
+//Start retrieving info before document's ready
+//==============================================
 var pathname = (window.location.hash).replace('#','');
 
+var categories = $.ajax({
+  url: "/categories",
+  type: "GET",
+  dataType: 'json'
+  //data: {task: {description: description, complete: false }}
+  }).done(function(data){
+    data;
+});
+
+var words = $.ajax({
+  url: "/words",
+  type: "GET",
+  dataType: 'json'
+  //data: {task: {description: description, complete: false }}
+  }).done(function(data){
+    data;
+});
+
+// =======================================================
+// check if story exists, if so, retrieve info
+// =======================================================
 if (pathname !== '') {
   console.log("here is pathname" + pathname);
   //go and get ajax data and save to site_data RENAME SITE_DATA

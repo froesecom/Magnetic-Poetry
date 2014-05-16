@@ -4,8 +4,17 @@ body {
 
 }
 
-#side_bar {
-  max-width: 250px;
+#side_bar_left {
+  width: 24%;
+  border: 1px solid black;
+  display: inline-block;
+  height: 100vh;
+  vertical-align: top;
+  padding: 0 15px;
+
+}
+#side_bar_right {
+  width: 20%;
   border: 1px solid black;
   display: inline-block;
   height: 100vh;
@@ -14,7 +23,7 @@ body {
 
 }
 #fridge {
-  width: 600px;
+  width: 48%;
   border: 1px solid black;
   display: inline-block;
   height: 100vh;

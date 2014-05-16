@@ -7,7 +7,7 @@ word_list = {
   "Generic Verbs-Basics" => %w(are is go get do ask run fly drink kiss think ),
   "Punctuation & Bits-Basics" => %w(? ? ! ! . . : : " " " " - - = = + + , , ' ' s s),
   "Feelings-Themes" => %w(happy sad angry mad tired pumped bored apathetic loved lonely dejected),
-  "Australiana-Themes" => %w(totes wobbly ute turps truckie shithouse plonk outback yabby walkabout hoon strewth footy shonky fairgo ropeable root drongo ratbag roo shocking ripper prezzy porky parma Ford Holden bush onya bloody grog gday mate dunny dero beaut Sheila Blundstones fair-dinkum brickie barbie stubby bogan),
+  "Australiana-Themes" => %w(totes wobbly ute turps truckie shithouse plonk outback yabby walkabout hoon strewth boomerang footy shonky fairgo ropeable root drongo ratbag roo shocking ripper prezzy porky parma Ford Holden bush onya bloody grog gday mate dunny dero beaut Sheila Blundstones fair-dinkum brickie barbie stubby bogan),
   "Random-Themes" => %w(fart cow turkey),
   "Alcohol-Themes" => %w(beer vodka wine Grange Champagne )
 }

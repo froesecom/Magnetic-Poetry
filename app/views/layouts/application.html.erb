@@ -11,5 +11,10 @@
   
   <%= yield %>
 
+<script>
+window.words = <%== ActiveSupport::JSON.encode(Word.select(:id, :name, :category_id)) %>;
+window.categories = <%== ActiveSupport::JSON.encode(Category.select(:id, :cat_type, :name)) %>;
+</script>
+
 </body>
 </html>

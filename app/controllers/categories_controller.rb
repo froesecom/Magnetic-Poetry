@@ -4,10 +4,13 @@ class CategoriesController < ApplicationController
   # GET /categories
   # GET /categories.json
   def index
-    
-    #@word = Wordnik.word.get_examples('slovenly')
-    
-    @word_lists = Wordnik.user.get_user_word_lists("Rhialto")
+  
+  categories = Category.all
+
+  respond_to do |format|
+      format.html
+      format.json {render :json => categories}
+    end
    
   end
 

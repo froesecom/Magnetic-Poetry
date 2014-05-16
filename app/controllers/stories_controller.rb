@@ -4,14 +4,16 @@ class StoriesController < ApplicationController
   # GET /stories
   # GET /stories.json
   def index
-    @categories = Category.all
-    @story_parts = StoryPart.all
-    @sample_words = Word.all
-    respond_to do |format|
-      format.html
-      format.json {render :json => @categories}
-    end
-    # @categories = Category.all_except("Common verbs", "Joiners")
+    @basic_categories = Category.where(:cat_type => "Basics")
+    @theme_categories = Category.where(:cat_type => "Themes")
+      
+    # @theme_words = @theme_categories.find_words
+    # @basic_words = @basic_categories.find_words
+    # respond_to do |format|
+    #   format.html
+    #   format.json {render :json => @categories}
+    # end
+    
   end
 
   # GET /stories/1

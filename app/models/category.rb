@@ -12,6 +12,12 @@
 class Category < ActiveRecord::Base
   has_many :words
 
+  # def self.find_words
+  #   categories = self.all
+  #   categories.each do |category|
+  #     category.words
+  #   end    
+  # end
  
   
 end
