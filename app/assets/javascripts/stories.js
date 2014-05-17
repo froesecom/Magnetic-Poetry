@@ -83,6 +83,8 @@ $(document).ready(function (){
         }).done(function(story_part_id){
           //set data-story_part to true to use for checking in event listener
           wordJQueryObject.attr("data-storypart", story_part_id);
+          //remove selector data attribute so word is not removed each time new category selected
+          wordJQueryObject.attr("data-selector_id", "");
           console.log("Story part created");
       });
     }, updateStoryPart: function(wordDomObject){
