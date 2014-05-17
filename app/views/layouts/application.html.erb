@@ -7,31 +7,32 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<nav>
-  <span>Magnetic Poetry</span>
+<div id="container">
+  <nav>
+    <span>Magnetic Poetry</span>
 
-  <!-- AddThis Button BEGIN -->
-    <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
-      <a class="addthis_button_preferred_1"></a>
-      <a class="addthis_button_preferred_2"></a>
-      <a class="addthis_button_preferred_3"></a>
-      <a class="addthis_button_preferred_4"></a>
-      <a class="addthis_button_compact"></a>
-      <a class="addthis_counter addthis_bubble_style"></a>
-    </div>
-    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-537733a575fa2b09"></script>
-    <!-- AddThis Button END -->
-    <span id="share_text">Share your poem </span>
-</nav>
-  
-  <%= yield %>
+    <!-- AddThis Button BEGIN -->
+      <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+        <a class="addthis_button_preferred_1"></a>
+        <a class="addthis_button_preferred_2"></a>
+        <a class="addthis_button_preferred_3"></a>
+        <a class="addthis_button_preferred_4"></a>
+        <a class="addthis_button_compact"></a>
+        <a class="addthis_counter addthis_bubble_style"></a>
+      </div>
+      <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-537733a575fa2b09"></script>
+      <!-- AddThis Button END -->
+      <span id="share_text">Share your poem </span>
+  </nav>
+    
+    <%= yield %>
 
-<script>
-  window.categoryWords = {}
-  var categories = <%== ActiveSupport::JSON.encode(Category.select(:id, :cat_type, :name)) %>;
-  var categorised_words = <%== ActiveSupport::JSON.encode(@categories) %>;
-  
-</script>
-
+  <script>
+    window.categoryWords = {}
+    var categories = <%== ActiveSupport::JSON.encode(Category.select(:id, :cat_type, :name)) %>;
+    var categorised_words = <%== ActiveSupport::JSON.encode(@categories) %>;
+    
+  </script>
+</div>
 </body>
 </html>

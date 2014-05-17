@@ -1,34 +1,33 @@
- <div id="container"> 
-  <div class="sidebar" id="side_bar_left">
-    <h1>Themes</h1>
-    <!-- drop down menu -->
-    <form> 
-     <select name='category_selector' id='theme_category'> 
-        <option value="" disabled selected>Choose a word category</option>
-        <% @theme_categories.each do |category| %>
-          <option class="category theme_category" value="<%= category.id %>"><%= category.name %></option>
-        <% end %>
-      </select>
-    </form>  
-  
+ 
+<div class="sidebar" id="side_bar_left">
+  <h1>Themes</h1>
+  <!-- drop down menu -->
+  <form> 
+   <select name='category_selector' id='theme_category'> 
+      <option value="" disabled selected>Choose a word category</option>
+      <% @theme_categories.each do |category| %>
+        <option class="category theme_category" value="<%= category.id %>"><%= category.name %></option>
+      <% end %>
+    </select>
+  </form>  
 
-  </div>
-  <!-- words get dragged onto the fridge -->
-  <div id="fridge"></div>
-  
-  <div class="sidebar" id="side_bar_right">
-    <h1>Basics</h1>
-    <!-- drop down menu -->
-    <form> 
-     <select name='category_selector' id='basic_category'> 
-        <option value="" disabled selected>Choose a word category</option>
-        <% @basic_categories.each do |category| %>
-          <option class="category" value="<%= category.id %>"><%= category.name %></option>
-        <% end %>
-      </select>
-    </form>  
-
-
-  </div> 
 
 </div>
+<!-- words get dragged onto the fridge -->
+<div id="fridge"></div>
+
+<div class="sidebar" id="side_bar_right">
+  <h1>Basics</h1>
+  <!-- drop down menu -->
+  <form> 
+   <select name='category_selector' id='basic_category'> 
+      <option value="" disabled selected>Choose a word category</option>
+      <% @basic_categories.each do |category| %>
+        <option class="category" value="<%= category.id %>"><%= category.name %></option>
+      <% end %>
+    </select>
+  </form>  
+
+
+</div> 
+
