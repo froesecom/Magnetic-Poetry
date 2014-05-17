@@ -1,6 +1,6 @@
 To do list:
 
-- finish updateStoryPart function!
+- render story function
 - push to heroku
 - create underscore template for creating divs in displayWords function
 - build create story function (also creates unique URL)

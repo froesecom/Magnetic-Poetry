@@ -97,9 +97,8 @@ $(document).ready(function (){
         type: "PUT",
         dataType: 'json',
         data: {story_part: {x: x, y: y, id: story_part_id }}
-        }).done(function(data){
-          
-          console.log("Here's what happened: " + data);
+        }).done(function(){
+          console.log("Story part updated");
       });
     }
   }
@@ -121,7 +120,7 @@ var word = {
     //DELETE ALL DIVS
     //iterate through words and create them
     _.each(word_objs, function(word){
-      $("#" + parent_div_id).append("<div class='word' id='"+word.id+"'>"+word.name+"</div>")  
+      $("#" + parent_div_id).append("<div class='word' data-selector_id='" + selector_id + "' id='"+word.id+"'>"+word.name+"</div>")  
     });
     //make words draggable
     $(function() {
@@ -135,8 +134,9 @@ var word = {
 // EVENT LISTENERS BELOW
 // =====================================
   $("#container").on("mouseup", ".word", function () {
-     
+      
       var wordObject = $(this);
+      
       //check if storypart already exists 
       //update or create accordingly
       if (wordObject.data("storypart")) {
@@ -147,13 +147,15 @@ var word = {
   });
 
   $("#basic_category, #theme_category ").on("change", function () {
+    var selector_id = $(this).attr('id')
+    //remove the words in the correct div
+    $("*[data-selector_id='" + selector_id + "']").remove();
     //check if a story already exists for this URL;
     //if not, create one.
     story.checkForStory();
     
     //pass jQuery selector into displayWords function
     word.displayWords($(this));
-
   });
   
 });
