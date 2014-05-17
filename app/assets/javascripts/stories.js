@@ -115,8 +115,14 @@ var word = {
 // EVENT LISTENERS BELOW
 // =====================================
   $("#container").on("mouseup", ".word", function () {
-      //need to create and if/else statement here to check if the story part exists
-      storyPart.createStoryPart(this, $(this));
+     
+      var wordObject = $(this);
+      //check if storypart already exists by seeing if data-storytype (from HTML) === true
+      if (wordObject.data("storypart") === true) {
+        console.log("storypart alread exists");
+      } else {
+        storyPart.createStoryPart(this, wordObject);
+      } 
   });
 
   $("#basic_category, #theme_category ").on("change", function () {
@@ -126,6 +132,7 @@ var word = {
     
     //pass jQuery selector into displayWords function
     word.displayWords($(this));
+
   
   });
   
