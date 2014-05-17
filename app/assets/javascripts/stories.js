@@ -1,3 +1,6 @@
+//=============================================
+//LOOK AT URL TO CHECK IF STORY ALREADY EXISTS
+//=============================================
 function CheckForStory() {
   //create global function for pathname
   pathname = (window.location.hash).replace('#','');
@@ -23,7 +26,9 @@ function ConstructPage(data) {
   console.log("constructing page", data);
 }
 
-//wait for the page to finish loading
+//=================================================
+// WAIT FOR THE PAGE TO FINISH LOADING
+//===============================================
 $(document).ready(function (){
 //=========================================
 //STORY FUNCTIONALITY
@@ -81,6 +86,8 @@ $(document).ready(function (){
           
           console.log("in done function of createStoryPart");
       });
+    }, updateStoryPart: function(storypart){
+      console.log("inside story part updater for " + storypart);
     }
   }
 
@@ -118,8 +125,9 @@ var word = {
      
       var wordObject = $(this);
       //check if storypart already exists by seeing if data-storytype (from HTML) === true
+      //update or create accordingly
       if (wordObject.data("storypart") === true) {
-        console.log("storypart alread exists");
+        storyPart.updateStoryPart(this);
       } else {
         storyPart.createStoryPart(this, wordObject);
       } 
@@ -133,9 +141,7 @@ var word = {
     //pass jQuery selector into displayWords function
     word.displayWords($(this));
 
-  
   });
-  
   
 });
 
