@@ -69,13 +69,11 @@ $(document).ready(function (){
   var storyPart = {
     createStoryPart: function(wordDomObject, wordJQueryObject){
       //find out x coord of word relative to #fridge div
-      console.log("insde story part creator");
+      console.log("inside story part creator");
       var x = Math.round(wordDomObject.offsetLeft - $("#fridge").position().left);
       var y = Math.round(wordDomObject.offsetTop);
       var word_id = parseInt(wordDomObject.id);
       var story_id = parseInt(pathname);
-      //set data-story_part to true to use for checking in event listener
-      wordJQueryObject.attr("data-storypart", "true");
 
       $.ajax({
         url: "/story_parts",
@@ -83,11 +81,16 @@ $(document).ready(function (){
         dataType: 'json',
         data: {story_part: {x: x, y: y, story_id: story_id, word_id: word_id }}
         }).done(function(story_part_id){
-          
-          console.log("in done function of createStoryPart");
+          //set data-story_part to true to use for checking in event listener
+          wordJQueryObject.attr("data-storypart", story_part_id);
+          console.log("Story part created");
       });
-    }, updateStoryPart: function(storypart){
-      console.log("inside story part updater for " + storypart);
+    }, updateStoryPart: function(wordDomObject){
+      //get the properties of the story part
+      var x = Math.round(wordDomObject.offsetLeft - $("#fridge").position().left);
+      var y = Math.round(wordDomObject.offsetTop);
+      var story_part_id = parseInt(wordDomObject.dataset.storypart);
+      
     }
   }
 
@@ -124,9 +127,9 @@ var word = {
   $("#container").on("mouseup", ".word", function () {
      
       var wordObject = $(this);
-      //check if storypart already exists by seeing if data-storytype (from HTML) === true
+      //check if storypart already exists 
       //update or create accordingly
-      if (wordObject.data("storypart") === true) {
+      if (wordObject.data("storypart")) {
         storyPart.updateStoryPart(this);
       } else {
         storyPart.createStoryPart(this, wordObject);

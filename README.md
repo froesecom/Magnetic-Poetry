@@ -1,5 +1,6 @@
 To do list:
 
+- finish updateStoryPart function!
 - push to heroku
 - create underscore template for creating divs in displayWords function
 - build create story function (also creates unique URL)
@@ -24,6 +25,6 @@ CLEAN UP
 
 
 CLEANUP
-
+- check createStoryPart function, and delete wordjQueryDomObject if not needed (also from event listener)
 - clean up spec file
 - clean up all the unused rails scaffoldi
