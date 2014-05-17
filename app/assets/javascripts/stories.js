@@ -101,7 +101,7 @@ var word = {
     //DELETE ALL DIVS
     //iterate through words and create them
     _.each(word_objs, function(word){
-      $("#" + parent_div_id).append("<div class='word' data-id='"+word.id+"'>"+word.name+"</div>")  
+      $("#" + parent_div_id).append("<div class='word' id='"+word.id+"'>"+word.name+"</div>")  
     });
     //make words draggable
     $(function() {
@@ -114,15 +114,12 @@ var word = {
 // ====================================
 // EVENT LISTENERS BELOW
 // =====================================
-  $("#container").on("click", ".word", function () {
-    //first check if a story exists
-    if (pathname !== '') {
+  $("#container").on("mouseup", ".word", function () {
       //need to create and if/else statement here to check if the story part exists
       storyPart.createStoryPart(this, $(this));
-    }
   });
 
-  $('#basic_category, #theme_category ').on('change', function () {
+  $("#basic_category, #theme_category ").on("change", function () {
     //check if a story already exists for this URL;
     //if not, create one.
     story.checkForStory();
