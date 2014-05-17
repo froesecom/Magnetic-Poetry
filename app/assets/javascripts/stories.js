@@ -121,8 +121,13 @@ var word = {
     var parent_div_id = $('#' + selector_id).closest('div').attr('id')
     //DELETE ALL DIVS
     //iterate through words and create them
+    var plusOrMinus = Array("", "-");
     _.each(word_objs, function(word){
-      $("#" + parent_div_id).append("<div class='word' data-selector_id='" + selector_id + "' id='"+word.id+"'>"+word.name+"</div>")  
+      var degrees = Math.random() * 6;
+      var pOrM = plusOrMinus[Math.floor(Math.random() * plusOrMinus.length)];
+      thingDegrees = parseInt(pOrM + degrees);
+      $("#" + parent_div_id).append("<div class='word' data-selector_id='" + selector_id + "' id='"+word.id+"'>"+word.name+"</div>");
+      $("#" + word.id).rotate(thingDegrees);
     });
     //make words draggable
     $(function() {
