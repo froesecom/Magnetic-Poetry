@@ -64,6 +64,7 @@ $(document).ready(function (){
   var storyPart = {
     createStoryPart: function(wordDomObject, wordJQueryObject){
       //find out x coord of word relative to #fridge div
+      console.log("insde story part creator");
       var x = Math.round(wordDomObject.offsetLeft - $("#fridge").position().left);
       var y = Math.round(wordDomObject.offsetTop);
       var word_id = parseInt(wordDomObject.id);
@@ -100,9 +101,12 @@ var word = {
     //DELETE ALL DIVS
     //iterate through words and create them
     _.each(word_objs, function(word){
-      $("#" + parent_div_id).append("<div>foo</div>")  
+      $("#" + parent_div_id).append("<div class='word' data-id='"+word.id+"'>"+word.name+"</div>")  
     });
-
+    //make words draggable
+    $(function() {
+      $( ".word" ).draggable();
+    });
     console.log("word objects", parent_div_id);
   }
 }
@@ -110,7 +114,7 @@ var word = {
 // ====================================
 // EVENT LISTENERS BELOW
 // =====================================
-  $(".word").on("click", function () {
+  $("#container").on("click", ".word", function () {
     //first check if a story exists
     if (pathname !== '') {
       //need to create and if/else statement here to check if the story part exists
@@ -125,18 +129,9 @@ var word = {
     
     //pass jQuery selector into displayWords function
     word.displayWords($(this));
-   
-
   
   });
   
-
-//======================================
-//jQueryUI functionality added
-//=======================================
-  $(function() {
-    $( ".word" ).draggable();
-  });
   
 });
 
