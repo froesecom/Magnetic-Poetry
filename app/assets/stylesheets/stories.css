@@ -3,7 +3,19 @@ body {
   height: 500px;
 
 }
+#share_text {
+  float: right;
+}
+nav {
+  padding: 30px;
 
+}
+.addthis_toolbox {
+  float: right;
+  position: relative;
+  top: -10px;
+
+}
 #side_bar_left {
   width: 24%;
   border: 1px solid black;
