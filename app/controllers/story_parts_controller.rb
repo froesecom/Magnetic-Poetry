@@ -49,6 +49,7 @@ class StoryPartsController < ApplicationController
 
   # PATCH/PUT /story_parts/1
   # PATCH/PUT /story_parts/1.json
+  # DO NOT DELETE!
   def update
     respond_to do |format|
       if @story_part.update(story_part_params)

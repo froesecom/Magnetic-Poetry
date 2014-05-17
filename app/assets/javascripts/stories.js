@@ -69,12 +69,12 @@ $(document).ready(function (){
   var storyPart = {
     createStoryPart: function(wordDomObject, wordJQueryObject){
       //find out x coord of word relative to #fridge div
-      console.log("inside story part creator");
       var x = Math.round(wordDomObject.offsetLeft - $("#fridge").position().left);
       var y = Math.round(wordDomObject.offsetTop);
       var word_id = parseInt(wordDomObject.id);
       var story_id = parseInt(pathname);
 
+      //create story part via ajax
       $.ajax({
         url: "/story_parts",
         type: "POST",
@@ -87,10 +87,20 @@ $(document).ready(function (){
       });
     }, updateStoryPart: function(wordDomObject){
       //get the properties of the story part
-      var x = Math.round(wordDomObject.offsetLeft - $("#fridge").position().left);
-      var y = Math.round(wordDomObject.offsetTop);
+      var x = wordDomObject.offsetLeft - $("#fridge").position().left;
+      var y = wordDomObject.offsetTop;
       var story_part_id = parseInt(wordDomObject.dataset.storypart);
       
+      //update story part via ajax
+      $.ajax({
+        url: "/story_parts/" + story_part_id,
+        type: "PUT",
+        dataType: 'json',
+        data: {story_part: {x: x, y: y, id: story_part_id }}
+        }).done(function(data){
+          
+          console.log("Here's what happened: " + data);
+      });
     }
   }
 
