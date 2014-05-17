@@ -29,3 +29,11 @@ CLEANUP
 - check createStoryPart function, and delete wordjQueryDomObject if not needed (also from event listener)
 - clean up spec file
 - clean up all the unused rails scaffoldi
+
+TECH USED
+- jQueryRotate
+- AddThis API
+- jQuery
+- Ajax
+- Underscore
+- 
