@@ -3,12 +3,12 @@ To do list:
 - render story function
 - push to heroku
 - create underscore template for creating divs in displayWords function
-- build create story function (also creates unique URL)
-- buidl create/update story functionality
-- get touch drag on mobile working
 - write test
 - create a 'seed' page
 
+- BUGS
+- the way words display when category selected
+- some words on fridge move when category selected
 
 TESTING
 - test classic rails stuff
@@ -16,6 +16,7 @@ TESTING
 
 POLISH
 - social media share icons
+- get touch drag on mobile working
 
 CLEAN UP 
 - get rid of Wordnik gem and config file

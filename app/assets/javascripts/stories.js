@@ -150,7 +150,7 @@ var word = {
 
   $("#basic_category, #theme_category ").on("change", function () {
     var selector_id = $(this).attr('id')
-    //remove the words in the correct div
+    //remove the words in the related div
     $("*[data-selector_id='" + selector_id + "']").remove();
     //check if a story already exists for this URL;
     //if not, create one.

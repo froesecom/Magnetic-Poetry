@@ -2,16 +2,20 @@ Category.destroy_all
 Word.destroy_all
 
 word_list = {
-  "Conjunctions & more-Basics" => %w(not the the a a to to if which what when why & & can good bad no yes from),
-  "Pronouns-Basics" => %w(I me you we us them she he her his hers him they nobody nothing this that it that its anybody anyone something one our who those my thier theirs these those),
-  "Generic Verbs-Basics" => %w(be are is go get do ask run fly drink kiss think ),
-  "Punctuation & Bits-Basics" => %w(? ? ! ! . . : : " " " " - - = = + + , , ' ' s s),
-  "Feelings-Themes" => %w(happy sad angry mad tired pumped bored apathetic loved lonely dejected),
+  "Alcohol-Themes" => %w(beer vodka wine Grange Champagne alcoholic drink),
   "Australiana-Themes" => %w(totes wobbly ute turps truckie shithouse plonk outback yabby walkabout hoon strewth boomerang footy shonky fairgo ropeable root drongo ratbag roo shocking ripper prezzy porky parma Ford Holden bush onya bloody grog gday mate dunny dero beaut Sheila Blundstones fair-dinkum brickie barbie stubby bogan),
-  "Random-Themes" => %w(fart cow turkey),
-  "Swears-Themes" => %w(fucked fuck shit),
-  "Alcohol-Themes" => %w(beer vodka wine Grange Champagne )
+  "Conjunctions & more-Basics" => %w(not the the the a a a a to to to if if which what when why & & can good bad no yes from),
+  "Feelings-Themes" => %w(happy sad angry mad tired pumped bored apathetic loved lonely dejected),
+  "Generic Verbs-Basics" => %w(be say get make go know take see come think look want give use find tell ask work seem feel try leave call have do are is go get do ask run kiss think ),
+  "Pronouns-Basics" => %w(I I I me me you you we we us us them them she he her his hers him they nobody nothing this that it that its anybody anyone something one our who those my their theirs these those),
+  "Punctuation & Bits-Basics" => %w(? ? ! ! . . : : " " " " - - = = + + , , ' ' ' ' t t s s),
+  "Random-Themes" => %w(fart cow turkey ride fly ),
+  "Swears-Themes" => %w(fucked fuck shit shitty bastard asshole dickhead dipshit)
 }
+
+word_list.each do |key, value|
+  value.sort_by!{|w| w.downcase}
+end
 
 word_list.each do |category, words|
   category_type_a = category.split("-")
