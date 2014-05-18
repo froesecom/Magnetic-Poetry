@@ -4,7 +4,8 @@ class StoryPartsController < ApplicationController
   # GET /story_parts
   # GET /story_parts.json
   def index
-    story_parts = StoryPart.all
+    
+    story_parts = StoryPart.where(params[:story_id])
     render :json => story_parts
   end
 
