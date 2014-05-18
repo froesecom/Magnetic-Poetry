@@ -18,7 +18,6 @@ function CheckForStory() {
   } 
 }
 
-CheckForStory();
 
 function ConstructPage(storyPartsWords) { 
   console.log("constructing page");
@@ -53,6 +52,8 @@ function ConstructPage(storyPartsWords) {
 // WAIT FOR THE PAGE TO FINISH LOADING
 //===============================================
 $(document).ready(function (){
+//Check for story
+  CheckForStory();
 //=========================================
 //STORY FUNCTIONALITY
 //=========================================
