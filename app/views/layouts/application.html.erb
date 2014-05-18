@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MagneticPoetry</title>
+  <title>Magnetic Poetry</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
@@ -28,7 +28,7 @@
     <%= yield %>
 
   <script>
-    window.categoryWords = {}
+   
     var categories = <%== ActiveSupport::JSON.encode(Category.select(:id, :cat_type, :name)) %>;
     var categorised_words = <%== ActiveSupport::JSON.encode(@categories) %>;
     

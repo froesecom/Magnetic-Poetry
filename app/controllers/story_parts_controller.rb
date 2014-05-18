@@ -4,9 +4,15 @@ class StoryPartsController < ApplicationController
   # GET /story_parts
   # GET /story_parts.json
   def index
-    
+    story_parts_words = {}
     story_parts = StoryPart.where(params[:story_id])
-    render :json => story_parts
+    # iterate through story parts to find word. Create story_part/word association to be passed into json data
+    story_parts.each do |story_part|
+      word = story_part.word
+      story_parts_words[story_part] = word
+    end
+    
+    render :json => story_parts_words
   end
 
   # GET /story_parts/1

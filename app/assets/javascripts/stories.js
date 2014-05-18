@@ -20,12 +20,21 @@ function CheckForStory() {
 
 CheckForStory();
 
-function ConstructPage(storyParts) {
-  //CONSTRUCT THE PAGE HERE
+function ConstructPage(storyPartsWords) { 
+  console.log("constructing page");
+  //create array so we can add + or - to rotation
+  var plusOrMinus = Array("", "-");
   debugger;
-  console.log("constructing page", storyParts);
-  _.each(storyParts, function(storyPart){
+  //create each story part
+  _.each(storyPartsWords, function(storyPartWord){
     
+      //add random amount of rotation to storypart
+      // var degrees = Math.random() * 6;
+      // var pOrM = plusOrMinus[Math.floor(Math.random() * plusOrMinus.length)];
+      // randDegreeRotation = parseInt(pOrM + degrees);
+      // //create words
+      // $("#fridge").append("<div class='word' data-selector_id='" + selector_id + "' id='"+word.id+"'>"+word.name+"</div>");
+      // $("#" + word.id).rotate(randDegreeRotation);
   });
 }
 
