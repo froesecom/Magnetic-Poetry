@@ -27,16 +27,25 @@ function ConstructPage(storyPartsWords) {
 
   //create each story part
   _.each(storyPartsWords, function(storyPartWord){
-      var storyPart = storyPartWord[0]
-      var word = storyPartWord[1]
-      //add random amount of rotation to word
-      var degrees = Math.random() * 6;
-      var pOrM = plusOrMinus[Math.floor(Math.random() * plusOrMinus.length)];
-      var randDegreeRotation = parseInt(pOrM + degrees);
-      //create words
-      
-      $("<div class='word' id='"+word.id+"'>" + word.name + "</div>").appendTo("#fridge");
-      // $("#" + word.id).rotate(randDegreeRotation);
+    var storyPart = storyPartWord[0]
+    var word = storyPartWord[1]
+    //add random amount of rotation to word
+    var degrees = Math.random() * 6;
+    var pOrM = plusOrMinus[Math.floor(Math.random() * plusOrMinus.length)];
+    var randDegreeRotation = parseInt(pOrM + degrees);
+    var wordId = word.id
+    //create words
+    $("<div class='word' data-storypart='" + storyPart.id + "' id='"+wordId+"'>" + word.name + "</div>").appendTo("#fridge");
+    //THESE SHOULD BE SELECTING THE STORY PART ID NOT THE WORD ID
+    $("#" + wordId).rotate(randDegreeRotation);
+    $("#" + wordId).animate({
+      left: storyPart.x,
+      top: storyPart.y
+    }, 1000);
+  });
+  //make words draggable
+  $(function() {
+      $( ".word" ).draggable();
   });
 }
 
@@ -103,7 +112,7 @@ $(document).ready(function (){
       });
     }, updateStoryPart: function(wordDomObject){
       //get the properties of the story part
-      var x = wordDomObjectBlu - $("#fridge").position().left;
+      var x = wordDomObject - $("#fridge").position().left;
       var y = wordDomObject.offsetTop;
       var story_part_id = parseInt(wordDomObject.dataset.storypart);
       
