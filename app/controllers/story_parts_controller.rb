@@ -11,9 +11,9 @@ class StoryPartsController < ApplicationController
       story_word_array = []
       story_word_array.push(story_part)
       story_word_array.push(story_part.word)
-      story_parts_words[story_part] = story_word_array
+      story_parts_words[story_part.id] = story_word_array
     end
-    binding.pry
+    
     render :json => story_parts_words
   end
 

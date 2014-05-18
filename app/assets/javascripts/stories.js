@@ -24,17 +24,18 @@ function ConstructPage(storyPartsWords) {
   console.log("constructing page");
   //create array so we can add + or - to rotation
   var plusOrMinus = Array("", "-");
-  
+
   //create each story part
   _.each(storyPartsWords, function(storyPartWord){
       var storyPart = storyPartWord[0]
       var word = storyPartWord[1]
-      //add random amount of rotation to storypart
-      // var degrees = Math.random() * 6;
-      // var pOrM = plusOrMinus[Math.floor(Math.random() * plusOrMinus.length)];
-      // randDegreeRotation = parseInt(pOrM + degrees);
-      // //create words
-      // $("#fridge").append("<div class='word' data-selector_id='" + selector_id + "' id='"+word.id+"'>"+word.name+"</div>");
+      //add random amount of rotation to word
+      var degrees = Math.random() * 6;
+      var pOrM = plusOrMinus[Math.floor(Math.random() * plusOrMinus.length)];
+      var randDegreeRotation = parseInt(pOrM + degrees);
+      //create words
+      
+      $("<div class='word' id='"+word.id+"'>" + word.name + "</div>").appendTo("#fridge");
       // $("#" + word.id).rotate(randDegreeRotation);
   });
 }
@@ -139,7 +140,7 @@ var word = {
       //add random amount of rotation to words
       var degrees = Math.random() * 6;
       var pOrM = plusOrMinus[Math.floor(Math.random() * plusOrMinus.length)];
-      randDegreeRotation = parseInt(pOrM + degrees);
+      var randDegreeRotation = parseInt(pOrM + degrees);
       //create words
       $("#" + parent_div_id).append("<div class='word' data-selector_id='" + selector_id + "' id='"+word.id+"'>"+word.name+"</div>");
       $("#" + word.id).rotate(randDegreeRotation);
