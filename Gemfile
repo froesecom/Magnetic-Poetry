@@ -1,10 +1,13 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+source 'https://rubygems.org'
+ruby '2.0.0'
+
 gem 'rails', '4.0.4'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'pg'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
@@ -31,6 +34,7 @@ gem 'underscore-rails'
 gem 'jquery-ui-rails'
 #wiselinks provides (among other thigns) support for .pushState() in non-compatable browsers 
 gem 'wiselinks'
+gem 'rails_12factor', group: :production
 
 group :development, :test do
   gem 'rspec-rails'
