@@ -8,10 +8,12 @@ class StoryPartsController < ApplicationController
     story_parts = StoryPart.where(params[:story_id])
     # iterate through story parts to find word. Create story_part/word association to be passed into json data
     story_parts.each do |story_part|
-      word = story_part.word
-      story_parts_words[story_part] = word
+      story_word_array = []
+      story_word_array.push(story_part)
+      story_word_array.push(story_part.word)
+      story_parts_words[story_part] = story_word_array
     end
-    
+    binding.pry
     render :json => story_parts_words
   end
 

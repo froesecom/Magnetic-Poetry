@@ -24,10 +24,11 @@ function ConstructPage(storyPartsWords) {
   console.log("constructing page");
   //create array so we can add + or - to rotation
   var plusOrMinus = Array("", "-");
-  debugger;
+  
   //create each story part
   _.each(storyPartsWords, function(storyPartWord){
-    
+      var storyPart = storyPartWord[0]
+      var word = storyPartWord[1]
       //add random amount of rotation to storypart
       // var degrees = Math.random() * 6;
       // var pOrM = plusOrMinus[Math.floor(Math.random() * plusOrMinus.length)];
