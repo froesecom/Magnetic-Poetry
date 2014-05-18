@@ -2,17 +2,16 @@
 //LOOK AT URL TO CHECK IF STORY ALREADY EXISTS
 //=============================================
 function CheckForStory() {
-  //create global function for pathname
+  //create global variable for pathname
   pathname = (window.location.hash).replace('#','');
    //check for story in the URL
    if (pathname !== '') {
     //if story, get data
-      console.log("trying to check for storyparts")
       $.ajax({
       url: "/story_parts",
       type: "GET",
       dataType: 'json',
-      data: {story_part: {story_id: pathname}}
+      data: {story_id: {story_id: pathname}}
       }).done(function(data){
         ConstructPage(data);
     });
@@ -21,9 +20,13 @@ function CheckForStory() {
 
 CheckForStory();
 
-function ConstructPage(data) {
+function ConstructPage(storyParts) {
   //CONSTRUCT THE PAGE HERE
-  console.log("constructing page", data);
+  debugger;
+  console.log("constructing page", storyParts);
+  _.each(storyParts, function(storyPart){
+    
+  });
 }
 
 //=================================================
@@ -89,7 +92,7 @@ $(document).ready(function (){
       });
     }, updateStoryPart: function(wordDomObject){
       //get the properties of the story part
-      var x = wordDomObject.offsetLeft - $("#fridge").position().left;
+      var x = wordDomObjectBlu - $("#fridge").position().left;
       var y = wordDomObject.offsetTop;
       var story_part_id = parseInt(wordDomObject.dataset.storypart);
       
@@ -123,11 +126,13 @@ var word = {
     //iterate through words and create them
     var plusOrMinus = Array("", "-");
     _.each(word_objs, function(word){
+      //add random amount of rotation to words
       var degrees = Math.random() * 6;
       var pOrM = plusOrMinus[Math.floor(Math.random() * plusOrMinus.length)];
-      thingDegrees = parseInt(pOrM + degrees);
+      randDegreeRotation = parseInt(pOrM + degrees);
+      //create words
       $("#" + parent_div_id).append("<div class='word' data-selector_id='" + selector_id + "' id='"+word.id+"'>"+word.name+"</div>");
-      $("#" + word.id).rotate(thingDegrees);
+      $("#" + word.id).rotate(randDegreeRotation);
     });
     //make words draggable
     $(function() {
