@@ -1,6 +1,7 @@
 To do list:
-
-- animate share this text
+- garbage can
+- Change restart to "new poem"
+- add floor
 - fix images not showing on heroku
 - write tests
 - create underscore template for creating divs in displayWords function
