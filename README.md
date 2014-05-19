@@ -1,4 +1,5 @@
 To do list:
+- SORT OUT HEROKU: secret_token, images
 - garbage can
 - Change restart to "new poem"
 - add floor
