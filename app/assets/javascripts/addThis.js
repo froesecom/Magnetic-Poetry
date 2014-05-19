@@ -1,0 +1,3 @@
+function loadAddThis() {
+    addthis.init()
+}

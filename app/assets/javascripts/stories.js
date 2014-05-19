@@ -51,8 +51,14 @@ function ConstructPage(storyPartsWords) {
 // WAIT FOR THE PAGE TO FINISH LOADING
 //===============================================
 $(document).ready(function (){
-//Check for story
+  //Check for story
   CheckForStory();
+  // load AddThis 2 seconds after rest of page loads
+  setTimeout(function() {
+    loadAddThis();
+  }, 2000);
+
+
 //=========================================
 //STORY FUNCTIONALITY
 //=========================================
