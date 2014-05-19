@@ -113,7 +113,7 @@ $(document).ready(function (){
       });
     }, updateStoryPart: function(wordDomObject){
       //get the properties of the story part
-      var x = wordDomObject - $("#fridge").position().left;
+      var x = wordDomObject.offsetLeft - $("#fridge").position().left;
       var y = wordDomObject.offsetTop;
       var story_part_id = parseInt(wordDomObject.dataset.storypart);
       
