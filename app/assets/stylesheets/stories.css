@@ -56,18 +56,22 @@ nav {
 }
 #fridge {
   background-color: #FBFDF2;
-
+  background-image: url(/assets/handle.png);
+  background-repeat: no-repeat;
+  background-position: right 30px top 50px;
   width: 400px;
   display: inline-block;
   height: 80vh;
   vertical-align: top;
   border-radius: 35px;
-  border: 1px #888888 solid;
+  border: 2px #888888 solid;
   -moz-box-shadow: 5px 9px 9px 2px #888888;
   -webkit-box-shadow: 5px 9px 9px 2px #888888;
   box-shadow: 5px 9px 9px 2px #888888;
 }
-#fridge a {
-  text-align: bottom;
-  color: white;
+#reset {
+  position: absolute;
+  bottom: 15px;
+  right: 30%;
+  color: black;
 }
