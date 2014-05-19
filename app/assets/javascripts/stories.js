@@ -36,9 +36,9 @@ function ConstructPage(storyPartsWords) {
     //create words
     $("<div class='word' data-storypart='" + storyPart.id + "' id='"+wordId+"'>" + word.name + "</div>").appendTo("#fridge");
     //THESE SHOULD BE SELECTING THE STORY PART ID NOT THE WORD ID
-    $("#" + wordId).rotate(randDegreeRotation);
-    $("#" + wordId).animate({
-      left: storyPart.x,
+    $("*[data-storypart='" + storyPart.id + "']").rotate(randDegreeRotation);
+    $("*[data-storypart='" + storyPart.id + "']").animate({
+      left: storyPart.x + $("#fridge").position().left,
       top: storyPart.y
     }, 1000);
   });

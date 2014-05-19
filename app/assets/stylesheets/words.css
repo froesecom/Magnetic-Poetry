@@ -4,6 +4,7 @@
   background-color: red;
   border: 1px solid black;
   display: inline-block;
+  position: absolute;
   border-width:1px;
   border-style:solid;
   border-bottom-color:#aaa;
