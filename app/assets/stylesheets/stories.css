@@ -39,6 +39,7 @@ nav {
   background-image: url(/assets/handle.png);
   background-repeat: no-repeat;
   background-position: right 30px top 50px;
+  padding: 15px;
   width: 400px;
   display: inline-block;
   height: 80vh;

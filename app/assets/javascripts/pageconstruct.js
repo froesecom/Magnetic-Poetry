@@ -19,11 +19,11 @@ function CheckForStory() {
     //bring down the intro text
     var $intro = $("#intro_text"); 
     $intro.animate({
-        top: '200px'
-    }, 2000, function () {
-      $intro.animate({
-        top: "-20%"
-      }, 2000)
+      top: '200px'
+      }, 2000, "easeOutBounce", function () {
+      $intro.delay(1500).animate({
+        top: "-50%"
+      }, 2000);
     });
   } 
 }
@@ -36,14 +36,14 @@ function ConstructPage(storyPartsWords) {
 
   //create each story part
   _.each(storyPartsWords, function(storyPartWord){
-    var storyPart = storyPartWord[0]
-    var word = storyPartWord[1]
+    var storyPart = storyPartWord[0];
+    var word = storyPartWord[1];
     //add random amount of rotation to word
     var degrees = Math.random() * 6;
     var pOrM = plusOrMinus[Math.floor(Math.random() * plusOrMinus.length)];
     var randDegreeRotation = parseInt(pOrM + degrees);
     
-    var wordId = word.id
+    var wordId = word.id;
     
     //create words
     $("<div class='storypart' data-storypart='" + storyPart.id + "' id='"+wordId+"'>" + word.name + "</div>").appendTo("#fridge");
