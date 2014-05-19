@@ -36,4 +36,5 @@ TECH USED
 - Underscore
 
 NICE TO HAVE
+- media queries
 - delete word (garbage can)

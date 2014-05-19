@@ -1,63 +1,5 @@
-//=============================================
-//LOOK AT URL TO CHECK IF STORY ALREADY EXISTS
-//=============================================
-function CheckForStory() {
-  //create global variable for pathname
-  pathname = (window.location.hash).replace('#','');
-   //check for story in the URL
-   if (pathname !== '') {
-    //if story, get data
-      $.ajax({
-      url: "/story_parts",
-      type: "GET",
-      dataType: 'json',
-      data: {story_id: {story_id: pathname}}
-      }).done(function(data){
-        ConstructPage(data);
-    });
-  } 
-}
 
 
-function ConstructPage(storyPartsWords) { 
-  console.log("constructing page");
-  //create array so we can add + or - to rotation
-  var plusOrMinus = Array("", "-");
-
-  //create each story part
-  _.each(storyPartsWords, function(storyPartWord){
-    var storyPart = storyPartWord[0]
-    var word = storyPartWord[1]
-    //add random amount of rotation to word
-    var degrees = Math.random() * 6;
-    var pOrM = plusOrMinus[Math.floor(Math.random() * plusOrMinus.length)];
-    var randDegreeRotation = parseInt(pOrM + degrees);
-    
-    var wordId = word.id
-    
-    //create words
-    $("<div class='storypart' data-storypart='" + storyPart.id + "' id='"+wordId+"'>" + word.name + "</div>").appendTo("#fridge");
-    $("*[data-storypart='" + storyPart.id + "']").rotate(randDegreeRotation);
-    $("*[data-storypart='" + storyPart.id + "']").animate({
-      left: storyPart.x + $("#fridge").position().left,
-      top: storyPart.y
-    }, 1000);
-  });
-  //make words draggable
-  $(function() {
-    $( ".storypart" ).draggable({
-      //revert: 'invalid'
-    });
-  });
-  setTimeout(function(){
-    addShareText();
-  }, 2500);
-  
-}
-
-//=================================================
-// WAIT FOR THE PAGE TO FINISH LOADING
-//===============================================
 $(document).ready(function (){
   //Check for story
   CheckForStory();
@@ -114,60 +56,9 @@ $(document).ready(function (){
     }
   }
 
-  
-
-
-//============================================
-//WORD FUNCTIONALITY
-//============================================
-var word = {
-  displayWords: function (selectorJQueryObj) {
-    //use selected_category(which is category id) to find word objects
-    var selected_category = selectorJQueryObj.val();
-    var word_objs = categorised_words[selected_category];
-    
-    //find id of selector so we can decide which sidebar to display words in
-    var selector_id = selectorJQueryObj.attr('id');
-    
-    //find id sidebar so we can append the words to it
-    var parent_div_id = $('#' + selector_id).closest('div').attr('id')
-    //DELETE ALL DIVS
-    //iterate through words and create them
-    var plusOrMinus = Array("", "-");
-    _.each(word_objs, function(word){
-      //add random amount of rotation to words
-      var degrees = Math.random() * 6;
-      var pOrM = plusOrMinus[Math.floor(Math.random() * plusOrMinus.length)];
-      var randDegreeRotation = parseInt(pOrM + degrees);
-      //create words
-      $("#" + parent_div_id).append("<div class='word' data-selector_id='" + selector_id + "' id='"+word.id+"'>"+word.name+"</div>");
-      $("#" + word.id).rotate(randDegreeRotation);
-    });
-    //make words draggable
-    $(function() {
-      $( ".word" ).draggable({
-        revert: 'invalid'
-      });
-    });
-    console.log("word objects", parent_div_id);
-  }
-}
-
 // ====================================
 // EVENT LISTENERS BELOW
 // =====================================
-  // $("#containerXXX").on("mouseup", ".word", function () {
-      
-  //     var wordObject = $(this);
-      
-  //     //check if storypart already exists 
-  //     //update or create accordingly
-  //     if (wordObject.data("storypart")) {
-  //       storyPart.updateStoryPart(this);
-  //     } else {
-  //       storyPart.createStoryPart(this, wordObject);
-  //     } 
-  // });
 
   $("#basic_category, #theme_category ").on("change", function () {
     var selector_id = $(this).attr('id')
