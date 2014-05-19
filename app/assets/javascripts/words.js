@@ -11,7 +11,7 @@ var word = {
     var selector_id = selectorJQueryObj.attr('id');
     
     //find id sidebar so we can append the words to it
-    var parent_div_id = $('#' + selector_id).closest('div').attr('id')
+    var parent_div_id = $('#' + selector_id).closest('div').attr('id');
     //DELETE ALL DIVS
     //iterate through words and create them
     var plusOrMinus = Array("", "-");
@@ -32,4 +32,4 @@ var word = {
     });
     console.log("word objects", parent_div_id);
   }
-}
+};

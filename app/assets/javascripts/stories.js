@@ -17,7 +17,7 @@ $(document).ready(function (){
         storyPart.createStoryPart(wordObject.get(0), $(wordObject.get(0)));
       } 
     }
-  })
+  });
   // load AddThis 2 seconds after rest of page loads
   setTimeout(function() {
     loadAddThis();
@@ -32,7 +32,7 @@ $(document).ready(function (){
       // Check if story has already been created
       if (pathname) {
         console.log("story already created");
-        return 
+        return; 
       } else {
         this.createStory();
       }
@@ -52,17 +52,17 @@ $(document).ready(function (){
         console.log(data);
 
         pathname = (window.location.hash).replace('#','');
-      })
+      });
       addShareText();
     }
-  }
+  };
 
 // ====================================
 // EVENT LISTENERS BELOW
 // =====================================
 
   $("#basic_category, #theme_category ").on("change", function () {
-    var selector_id = $(this).attr('id')
+    var selector_id = $(this).attr('id');
     //remove the words in the related div
     $("*[data-selector_id='" + selector_id + "']").remove();
     //check if a story already exists for this URL;
