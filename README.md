@@ -1,10 +1,10 @@
 To do list:
 
 - animate share this text
-- spread out words in sidebars
-- push to heroku
+- fix images not showing on heroku
+- write tests
 - create underscore template for creating divs in displayWords function
-- write test
+
 - add google analytics
 
 LOOK
