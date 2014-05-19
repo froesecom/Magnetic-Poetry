@@ -1,0 +1,33 @@
+#nav_title {
+  margin-left: 20px;
+  color: white;
+  background: red;
+  padding: 5px;
+  font-size: 26px;
+  text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+  border-style:solid;
+  border-bottom-color:#aaa;
+  border-right-color:#aaa;
+  border-top-color:#ddd;
+  border-left-color:#ddd;
+  border-radius:5px;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+}
+#intro_text {
+  font-size: 36px;
+  top: -20%;
+  position: absolute;
+  width: 400px;
+}
+
+#reset {
+  position: absolute;
+  bottom: 15px;
+  right: 30%;
+  color: black;
+}
+#share_text {
+  float: right;
+  display: none;
+}

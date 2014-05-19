@@ -1,8 +1,9 @@
 
-
 $(document).ready(function (){
   //Check for story
   CheckForStory();
+  
+  //make the fridge the droppable target for dragged words and storyparts
   $('#fridge').droppable({
     accept: '.word, .storypart',
     drop: function (event, ui) {

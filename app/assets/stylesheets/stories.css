@@ -7,29 +7,9 @@ body {
   min-width: 860px;
   margin: auto;
 }
-#share_text {
-  float: right;
-  display: none;
-}
+
 nav {
   padding: 30px 0;
-
-}
-#nav_title {
-  margin-left: 20px;
-  color: white;
-  background: red;
-  padding: 5px;
-  font-size: 26px;
-  text-shadow: 2px 0 0 black, -2px 0 0 black, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
-  border-style:solid;
-  border-bottom-color:#aaa;
-  border-right-color:#aaa;
-  border-top-color:#ddd;
-  border-left-color:#ddd;
-  border-radius:5px;
-  -moz-border-radius:5px;
-  -webkit-border-radius:5px;
 }
 .addthis_toolbox {
   float: right;
@@ -44,7 +24,6 @@ nav {
   height: 80vh;
   vertical-align: top;
   padding: 0 15px;
-
 
 }
 #side_bar_right {
@@ -70,9 +49,4 @@ nav {
   -webkit-box-shadow: 5px 9px 9px 2px #888888;
   box-shadow: 5px 9px 9px 2px #888888;
 }
-#reset {
-  position: absolute;
-  bottom: 15px;
-  right: 30%;
-  color: black;
-}
+

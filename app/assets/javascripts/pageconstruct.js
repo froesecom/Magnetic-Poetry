@@ -15,6 +15,16 @@ function CheckForStory() {
       }).done(function(data){
         ConstructPage(data);
     });
+  } else {
+    //bring down the intro text
+    var $intro = $("#intro_text"); 
+    $intro.animate({
+        top: '200px'
+    }, 2000, function () {
+      $intro.animate({
+        top: "-20%"
+      }, 2000)
+    });
   } 
 }
 
