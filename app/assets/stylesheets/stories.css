@@ -39,7 +39,6 @@ nav {
 }
 #side_bar_left {
   width: 24%;
-  border: 1px solid black;
   display: inline-block;
   height: 80vh;
   vertical-align: top;
@@ -49,7 +48,6 @@ nav {
 }
 #side_bar_right {
   width: 20%;
-  border: 1px solid black;
   display: inline-block;
   height: 80vh;
   vertical-align: top;
@@ -57,16 +55,19 @@ nav {
 
 }
 #fridge {
-  background: url(/assets/fridge-texture.jpg) no-repeat;
-  background-size: cover;
+  background-color: #FBFDF2;
+
   width: 400px;
   display: inline-block;
   height: 80vh;
   vertical-align: top;
   border-radius: 35px;
   border: 1px #888888 solid;
-
   -moz-box-shadow: 5px 9px 9px 2px #888888;
   -webkit-box-shadow: 5px 9px 9px 2px #888888;
   box-shadow: 5px 9px 9px 2px #888888;
+}
+#fridge a {
+  text-align: bottom;
+  color: white;
 }

@@ -5,7 +5,11 @@ To do list:
 - push to heroku
 - create underscore template for creating divs in displayWords function
 - write test
+- add google analytics
 
+LOOK
+- get fridge image background
+- reset page button
 
 TESTING
 - test classic rails stuff
@@ -30,4 +34,6 @@ TECH USED
 - jQueryUI
 - Ajax
 - Underscore
-- 
+
+NICE TO HAVE
+- delete word (garbage can)
