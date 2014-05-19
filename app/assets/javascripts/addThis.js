@@ -1,3 +1,0 @@
-function loadAddThis() {
-    addthis.init()
-}

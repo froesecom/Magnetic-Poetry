@@ -8,6 +8,7 @@ body {
 }
 #share_text {
   float: right;
+  display: none;
 }
 nav {
   padding: 30px 0;

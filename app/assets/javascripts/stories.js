@@ -45,6 +45,10 @@ function ConstructPage(storyPartsWords) {
   $(function() {
       $( ".word" ).draggable();
   });
+  setTimeout(function(){
+    addShareText();
+  }, 2500);
+  
 }
 
 //=================================================
@@ -88,6 +92,7 @@ $(document).ready(function (){
 
         pathname = (window.location.hash).replace('#','');
       })
+      addShareText();
     }
   }
 
