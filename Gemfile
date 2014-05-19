@@ -6,7 +6,6 @@ ruby '2.0.0'
 
 gem 'rails', '4.0.4'
 
-
 # Use postgresql as the database for Active Record
 
 gem 'pg'
@@ -29,7 +28,6 @@ gem 'jquery-rails'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
-gem 'wordnik'
 gem 'underscore-rails'
 gem 'jquery-ui-rails'
 #wiselinks provides (among other thigns) support for .pushState() in non-compatable browsers 

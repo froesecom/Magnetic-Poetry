@@ -28,7 +28,6 @@ function CheckForStory() {
   } 
 }
 
-
 function ConstructPage(storyPartsWords) { 
   console.log("constructing page");
   //create array so we can add + or - to rotation
@@ -45,7 +44,7 @@ function ConstructPage(storyPartsWords) {
     
     var wordId = word.id;
     
-    //create words
+    //create storyparts
     $("<div class='storypart' data-storypart='" + storyPart.id + "' id='"+wordId+"'>" + word.name + "</div>").appendTo("#fridge");
     $("*[data-storypart='" + storyPart.id + "']").rotate(randDegreeRotation);
     $("*[data-storypart='" + storyPart.id + "']").animate({
@@ -53,7 +52,7 @@ function ConstructPage(storyPartsWords) {
       top: storyPart.y
     }, 1000);
   });
-  //make words draggable
+  //make storyparts draggable
   $(function() {
     $( ".storypart" ).draggable({
       //revert: 'invalid'

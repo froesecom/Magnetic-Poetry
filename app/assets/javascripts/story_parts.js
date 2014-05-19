@@ -38,4 +38,4 @@
           console.log("Story part updated");
       });
     }
-  }
+  };
