@@ -32,7 +32,9 @@ function ConstructPage(storyPartsWords) {
     var degrees = Math.random() * 6;
     var pOrM = plusOrMinus[Math.floor(Math.random() * plusOrMinus.length)];
     var randDegreeRotation = parseInt(pOrM + degrees);
+    
     var wordId = word.id
+    
     //create words
     $("<div class='word' data-storypart='" + storyPart.id + "' id='"+wordId+"'>" + word.name + "</div>").appendTo("#fridge");
     $("*[data-storypart='" + storyPart.id + "']").rotate(randDegreeRotation);
@@ -43,7 +45,9 @@ function ConstructPage(storyPartsWords) {
   });
   //make words draggable
   $(function() {
-      $( ".word" ).draggable();
+    $( ".word" ).draggable({
+      revert: 'invalid'
+    });
   });
   setTimeout(function(){
     addShareText();
@@ -57,6 +61,20 @@ function ConstructPage(storyPartsWords) {
 $(document).ready(function (){
   //Check for story
   CheckForStory();
+  $('#fridge').droppable({
+    accept: '.word',
+    drop: function (event, ui) {
+      var wordObject = $(ui.helper);
+
+      //check if storypart already exists 
+      //update or create accordingly
+      if (wordObject.data("storypart")) {
+        storyPart.updateStoryPart(wordObject.get(0));
+      } else {
+        storyPart.createStoryPart(wordObject.get(0), $(wordObject.get(0)));
+      } 
+    }
+  })
   // load AddThis 2 seconds after rest of page loads
   setTimeout(function() {
     loadAddThis();
@@ -107,7 +125,7 @@ $(document).ready(function (){
       var y = Math.round(wordDomObject.offsetTop);
       var word_id = parseInt(wordDomObject.id);
       var story_id = parseInt(pathname);
-
+      
       //create story part via ajax
       $.ajax({
         url: "/story_parts",
@@ -167,7 +185,9 @@ var word = {
     });
     //make words draggable
     $(function() {
-      $( ".word" ).draggable();
+      $( ".word" ).draggable({
+        revert: 'invalid'
+      });
     });
     console.log("word objects", parent_div_id);
   }
@@ -176,18 +196,18 @@ var word = {
 // ====================================
 // EVENT LISTENERS BELOW
 // =====================================
-  $("#container").on("mouseup", ".word", function () {
+  // $("#containerXXX").on("mouseup", ".word", function () {
       
-      var wordObject = $(this);
+  //     var wordObject = $(this);
       
-      //check if storypart already exists 
-      //update or create accordingly
-      if (wordObject.data("storypart")) {
-        storyPart.updateStoryPart(this);
-      } else {
-        storyPart.createStoryPart(this, wordObject);
-      } 
-  });
+  //     //check if storypart already exists 
+  //     //update or create accordingly
+  //     if (wordObject.data("storypart")) {
+  //       storyPart.updateStoryPart(this);
+  //     } else {
+  //       storyPart.createStoryPart(this, wordObject);
+  //     } 
+  // });
 
   $("#basic_category, #theme_category ").on("change", function () {
     var selector_id = $(this).attr('id')
