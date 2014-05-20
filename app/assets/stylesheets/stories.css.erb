@@ -40,7 +40,7 @@ nav {
 }
 #fridge {
   background-color: #FBFDF2;
-  background-image: url(/assets/handle.png);
+  background-image: url('<%= asset_path("/assets/handle.png") %>');
   background-repeat: no-repeat;
   background-position: right 30px top 50px;
   max-height: 580px;
@@ -61,7 +61,7 @@ nav {
   position: absolute;
   bottom: -5px;
   right: 15px;
-  background: url(/assets/trash.png); 
+  background: url('<%= asset_path("/assets/trash.png") %>'); 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
