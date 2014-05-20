@@ -12,7 +12,7 @@ word_list = {
   "Pronouns-Basics" => %w(I I I me me you you we we us us them them she he her his hers him they nobody nothing this that it that its anybody anyone something one our who those my their theirs these those),
   "Punctuation & Bits-Basics" => %w(? ? ! ! . . : : " " " " - - = = + + , , ' ' ' ' t t s s),
   "Random-Themes" => %w(fart cow turkey ride butterfly light knackers shizzle),
-  "Swears-Themes" => %w(fucked jerk fuck shit shitty bastard asshole dickhead dipshit)
+  "Swears-Themes" => %w(bumcheese nimrod fucked jerk fuck shit shitty bastard asshole dickhead dipshit)
 }
 
 word_list.each do |key, value|
