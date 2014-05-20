@@ -74,11 +74,9 @@ class StoryPartsController < ApplicationController
   # DELETE /story_parts/1
   # DELETE /story_parts/1.json
   def destroy
+    story_part_id = @story_part.id
     @story_part.destroy
-    respond_to do |format|
-      format.html { redirect_to story_parts_url }
-      format.json { head :no_content }
-    end
+    render :json => story_part_id
   end
 
   private

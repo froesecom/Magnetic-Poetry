@@ -37,5 +37,17 @@
         }).done(function(){
           console.log("Story part updated");
       });
+    }, deleteStoryPart: function(storyPartObject){
+      var storyPartId = storyPartObject.attr('data-storypart');
+       //delete story part
+      $.ajax({
+        url: "/story_parts/" + storyPartId,
+        type: "DELETE",
+        dataType: 'json',
+        data: {story_part: {id: storyPartId }}
+        }).done(function(data){
+          $("*[data-storypart='" + data + "']").remove();
+          console.log("Story part deleted: " + typeof(data));
+      });
     }
   };

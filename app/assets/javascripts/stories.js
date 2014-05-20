@@ -18,6 +18,16 @@ $(document).ready(function (){
       } 
     }
   });
+  //make the trash can dropable for storyparts
+  $('#trash').droppable({
+    accept: '.storypart',
+    drop: function (event, ui) {
+      var storyPartObject = $(ui.helper);
+
+      storyPart.deleteStoryPart(storyPartObject);
+      
+    }
+  });
   // load AddThis 2 seconds after rest of page loads
   setTimeout(function() {
     loadAddThis();
