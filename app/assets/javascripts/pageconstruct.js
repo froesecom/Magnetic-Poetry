@@ -22,7 +22,7 @@ function CheckForStory() {
       top: '80px'
       }, 2000, "easeOutBounce", function () {
       $intro.delay(1500).animate({
-        top: "-50%"
+        top: "-100%"
       }, 2000);
     });
   } 
