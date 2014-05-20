@@ -7,6 +7,13 @@ $(document).ready(function (){
   $('#fridge').droppable({
     accept: '.word, .storypart',
     drop: function (event, ui) {
+      var fridgeOffset = $(this).offset();
+      $(ui.draggable).css({
+          position: 'absolute',
+          left: $(ui.draggable).offset().left - fridgeOffset.left,
+          top: $(ui.draggable).offset().top - fridgeOffset.top
+      });
+      $(this).append(ui.draggable); // I love you Joels
       var wordObject = $(ui.helper);
 
       //check if storypart already exists 
