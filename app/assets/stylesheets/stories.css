@@ -4,8 +4,10 @@ body {
 }
 #container {
   max-width: 960px;
-  min-width: 860px;
+  min-width: 900px;
   margin: auto;
+  margin-bottom: 30px;
+  position: relative;
 }
 
 nav {
@@ -19,7 +21,7 @@ nav {
 
 }
 #side_bar_left {
-  width: 24%;
+  width: 20%;
   display: inline-block;
   height: 80vh;
   vertical-align: top;
@@ -54,8 +56,8 @@ nav {
   height: 150px;
   width: 150px;
   position: absolute;
-  bottom: 5px;
-  right: 60px;
+  bottom: -5px;
+  right: 15px;
   background: url(/assets/trash.png); 
   -webkit-background-size: cover;
   -moz-background-size: cover;
