@@ -1,4 +1,5 @@
 To do list:
+- change red to a color that fits pallete scheme
 - get reset button to shift up to left on hover
 - add media query for mobile's saying this doesn't work.......!
 - make fridge greenish pastel
