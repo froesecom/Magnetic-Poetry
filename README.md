@@ -1,12 +1,10 @@
 To do list:
-- add listener on new poem button to redirect to new button
-- SORT OUT HEROKU: secret_token, images
-- add floor
-- fix images not showing on heroku
+- add more words
+- fix share text
+- write readme
+- drop and reseed heroku database (change seed to not destroy words)
+- clean up
 - write tests
-- create underscore template for creating divs in displayWords function
-
-
 
 
 TESTING
@@ -14,7 +12,7 @@ TESTING
 - test if associations are working
 
 POLISH
-- get touch drag on mobile working
+
 
 CLEAN UP 
 - get rid of Wordnik gem and config file
@@ -26,6 +24,7 @@ CLEAN UP
 TECH USED
 - jQueryRotate
 - AddThis API
+- Facebook
 - jQuery
 - jQueryUI
 - Ajax
@@ -33,3 +32,5 @@ TECH USED
 
 NICE TO HAVE
 - media queries
+- create underscore template for creating divs in displayWords function
+- get touch drag on mobile working
