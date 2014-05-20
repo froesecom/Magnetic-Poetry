@@ -19,6 +19,27 @@
   -webkit-transform:rotate(-7deg); /* Opera, Chrome, and Safari */
 
 }
+#left_picture_frame {
+  background: url('<%= asset_path("/assets/pictureframe.png") %>') no-repeat;
+  position: absolute;
+  -webkit-background-size: 100% auto;
+  -moz-background-size: 100% auto;
+  -o-background-size: 100% auto;
+  background-size: 100% auto;
+  width: 170px;
+  height: 130px;
+}
+
+#left_sidebar_header, #left_picture_frame {
+  transform:rotate(-3deg);
+  -ms-transform:rotate(-3deg); /* IE 9 */
+  -webkit-transform:rotate(-3deg); /* Opera, Chrome, and Safari */
+}
+
+#left_sidebar_header {
+  padding: 45px 0 65px 45px;
+ 
+}
 
 div#intro_text {
   font-family: "Coronette", Sans-Serif;
