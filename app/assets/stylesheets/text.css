@@ -17,6 +17,7 @@
 #intro_text {
   font-size: 36px;
   top: -50%;
+  padding: 10px;
   position: absolute;
   width: 300px;
   border: 4px solid black;
