@@ -51,12 +51,15 @@ nav {
   box-shadow: 5px 9px 9px 2px #888888;
 }
 #trash {
-  border: 1px solid black;
   height: 150px;
   width: 150px;
-  background-color: gray;
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 5px;
+  right: 60px;
+  background: url(/assets/trash.png); 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 

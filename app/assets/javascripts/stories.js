@@ -18,7 +18,7 @@ $(document).ready(function (){
       } 
     }
   });
-  //make the trash can dropable for storyparts
+  //make the trash can dropable for storyparts and .words with data-storypart
   $('#trash').droppable({
     accept: '.storypart, [data-storypart]',
     drop: function (event, ui) {

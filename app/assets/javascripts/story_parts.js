@@ -47,7 +47,7 @@
         data: {story_part: {id: storyPartId }}
         }).done(function(data){
           $("*[data-storypart='" + data + "']").remove();
-          console.log("Story part deleted: " + typeof(data));
+          console.log("Story part deleted: " + data);
       });
     }
   };
