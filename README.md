@@ -1,5 +1,5 @@
 To do list:
-- change red to a color that fits pallete scheme
+- supercoach
 - add media query for mobile's saying this doesn't work.......!
 
 - add more words
