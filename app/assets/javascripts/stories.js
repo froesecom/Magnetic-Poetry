@@ -82,6 +82,11 @@ $(document).ready(function (){
     //pass jQuery selector into displayWords function
     word.displayWords($(this));
   });
+
+  $("#reset").on("click", function(){
+    console.log("gonna restart this shit");
+    window.location = '/';
+  });
   
 });
 

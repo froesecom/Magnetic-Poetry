@@ -1,5 +1,5 @@
 To do list:
-
+- add listener on new poem button to redirect to new button
 - SORT OUT HEROKU: secret_token, images
 - add floor
 - fix images not showing on heroku
