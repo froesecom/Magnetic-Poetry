@@ -31,13 +31,34 @@
 }
 
 #left_sidebar_header, #left_picture_frame {
-  transform:rotate(-3deg);
-  -ms-transform:rotate(-3deg); /* IE 9 */
-  -webkit-transform:rotate(-3deg); /* Opera, Chrome, and Safari */
+  transform:rotate(-2deg);
+  -ms-transform:rotate(-2deg); /* IE 9 */
+  -webkit-transform:rotate(-2deg); /* Opera, Chrome, and Safari */
 }
 
 #left_sidebar_header {
   padding: 45px 0 65px 45px;
+ 
+}
+#right_picture_frame {
+  background: url('<%= asset_path("/assets/pictureframe2.png") %>') no-repeat;
+  position: absolute;
+  -webkit-background-size: 100% auto;
+  -moz-background-size: 100% auto;
+  -o-background-size: 100% auto;
+  background-size: 100% auto;
+  width: 200px;
+  height: 150px;
+}
+
+#right_sidebar_header, #right_picture_frame {
+  transform:rotate(3deg);
+  -ms-transform:rotate(3deg); /* IE 9 */
+  -webkit-transform:rotate(3deg); /* Opera, Chrome, and Safari */
+}
+
+#right_sidebar_header {
+  padding: 55px 0 75px 55px;
  
 }
 
