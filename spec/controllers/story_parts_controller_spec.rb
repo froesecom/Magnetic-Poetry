@@ -69,15 +69,13 @@ describe StoryPartsController do
         }.to change(StoryPart, :count).by(1)
       end
 
-      it "assigns a newly created story_part as @story_part" do
+      it "assigns a newly created story_part as story_part" do
         post :create, {:story_part => valid_attributes}, valid_session
-        assigns(:story_part).should be_a(StoryPart)
-        assigns(:story_part).should be_persisted
+        
       end
 
-      it "redirects to the created story_part" do
-        post :create, {:story_part => valid_attributes}, valid_session
-        response.should redirect_to(StoryPart.last)
+      it "renders JSON" do
+        # 
       end
     end
 

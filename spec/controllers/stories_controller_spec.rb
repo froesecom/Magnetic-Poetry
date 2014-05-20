@@ -75,9 +75,8 @@ describe StoriesController do
         assigns(:story).should be_persisted
       end
 
-      it "redirects to the created story" do
-        post :create, {:story => valid_attributes}, valid_session
-        response.should redirect_to(Story.last)
+      it "renders json" do
+        ActiveSupport::JSON.decode(response.body).should_not be_nil
       end
     end
 
