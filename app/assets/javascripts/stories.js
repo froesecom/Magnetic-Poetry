@@ -20,7 +20,7 @@ $(document).ready(function (){
   });
   //make the trash can dropable for storyparts
   $('#trash').droppable({
-    accept: '.storypart',
+    accept: '.storypart, [data-storypart]',
     drop: function (event, ui) {
       var storyPartObject = $(ui.helper);
 
