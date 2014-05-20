@@ -1,9 +1,8 @@
 To do list:
-- add image for facebook to use!
-- make data-storypart droppable in the garbage
+
 - SORT OUT HEROKU: secret_token, images
 - garbage can
-- Change restart to "new poem"
+
 - add floor
 - fix images not showing on heroku
 - write tests
