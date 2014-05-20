@@ -19,7 +19,7 @@ function CheckForStory() {
     //bring down the intro text
     var $intro = $("#intro_text"); 
     $intro.animate({
-      top: '200px'
+      top: '80px'
       }, 2000, "easeOutBounce", function () {
       $intro.delay(1500).animate({
         top: "-100%"
