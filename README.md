@@ -1,4 +1,8 @@
 To do list:
+- get reset button to shift up to left on hover
+- add media query for mobile's saying this doesn't work.......!
+- make fridge greenish pastel
+- make wall offwhite
 - add more words
 - fix share text
 - write readme
@@ -11,7 +15,6 @@ TESTING
 - test classic rails stuff
 - test if associations are working
 
-POLISH
 
 
 CLEAN UP 
