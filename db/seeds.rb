@@ -4,7 +4,7 @@ Word.destroy_all
 word_list = {
   "Adjectives-Basics" => %w(repulsive mighty gorgeous tasty dusty elated embarrassed scary agreeable anxious rotten swift thoughtful nervous shaggy sharp hilarious nice tricky),
   "Adverbs-Basics" => %w(aggressively creatively dependably honestly originally naturally passionately regularily truthfully professionally utterly joyfully),
-  "Alcohol-Themes" => %w(beer bourbon shot drunk intoxicated vodka wine Grange Champagne alcoholic drink),
+  "Alcohol-Themes" => %w(beer bourbon ale shot drunk intoxicated vodka wine Grange Champagne alcoholic drink),
   "Australiana-Themes" => %w(totes wobbly ute turps truckie shithouse plonk outback yabby walkabout hoon strewth boomerang footy shonky fairgo ropeable root drongo ratbag roo shocking ripper prezzy porky parma Ford Holden bush onya bloody grog gday mate dunny dero beaut Sheila Blundstones fair-dinkum brickie barbie stubby bogan),
   "Conjunctions & more-Basics" => %w(not the the the a a a a to to to if if which what when why & & can good bad no yes from),
   "Feelings-Themes" => %w(happy sad angry mad tired pumped bored apathetic loved lonely dejected),
@@ -12,6 +12,7 @@ word_list = {
   "Pronouns-Basics" => %w(I I I me me you you we we us us them them she he her his hers him they nobody nothing this that it that its anybody anyone something one our who those my their theirs these those),
   "Punctuation & Bits-Basics" => %w(? ? ! ! . . : : " " " " - - = = + + , , ' ' ' ' t t s s),
   "Random-Themes" => %w(fart cow turkey ride butterfly light knackers shizzle),
+  "Shakespeare-Themes" => %w(art thou anon dost doth ere fain hark hence hither thither hath ha mark prithee sirrah thee whence wherefore bodkin beshrew deboshed erewhile haggard knave lowt quitance soil vail woodcock),
   "Swears-Themes" => %w(bumcheese nimrod fucked jerk fuck shit shitty bastard asshole dickhead dipshit)
 }
 
