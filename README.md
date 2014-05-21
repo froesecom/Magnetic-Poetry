@@ -1,9 +1,8 @@
 To do list:
 - supercoach
 - add media query for mobile's saying this doesn't work.......!
-
+- contact me div that slides in
 - add more words
-- fix share text
 - write readme
 - drop and reseed heroku database (change seed to not destroy words)
 - clean up
