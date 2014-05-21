@@ -12,8 +12,9 @@ word_list = {
   "Pronouns-Basics" => %w(I I I me me you you we we us us them them she he her his hers him they nobody nothing this that it that its anybody anyone something one our who those my their theirs these those),
   "Punctuation & Bits-Basics" => %w(? ? ! ! . . : : " " " " - - = = + + , , ' ' ' ' t t s s),
   "Random-Themes" => %w(fart cow turkey ride butterfly light knackers shizzle),
-  "Shakespeare-Themes" => %w(art thou anon dost doth ere fain hark hence hither thither hath ha mark prithee sirrah thee whence wherefore bodkin beshrew deboshed erewhile haggard knave lowt quitance soil vail woodcock),
-  "Swears-Themes" => %w(bumcheese nimrod fucked jerk fuck shit shitty bastard asshole dickhead dipshit)
+  "Shakespeare-Themes" => %w(art yonder virtue thou anon dost doth ere fain hark hence hither thither hath ha mark prithee sirrah thee whence wherefore bodkin beshrew deboshed erewhile haggard knave lowt quitance soil vail woodcock),
+  "Swears-Themes" => %w(bumcheese nimrod fucked jerk fuck shit shitty bastard asshole dickhead dipshit),
+  "Valley Girl-Themes" => %w(OMG like stuff lol like like mall girlfriend boyfriend cool whatever not totally hot chill bitch um whatevs barf way duh)
 }
 
 word_list.each do |key, value|
